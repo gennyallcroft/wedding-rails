@@ -1,0 +1,18 @@
+
+<h1>RSVPs</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th></th>
+  </tr>
+ 
+  <% @responses.each do |response| %>
+    <tr>
+      <td><%= response.name %></td>
+      <td><%= response.text %></td>
+      <td><%= link_to 'Show', response_path(response) %></td>
+    </tr>
+  <% end %>
+</table>
