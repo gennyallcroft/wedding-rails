@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'travel/index'
+  get 'details/index'
   get 'home/index'
 
   resources :responses
