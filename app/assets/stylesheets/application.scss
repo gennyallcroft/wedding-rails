@@ -1,2 +1,20 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+// Variables
+@import "base/variables";
+
+// Partials - main css files
+@import "partials/*";
+
+.title-container {
+    font-family: $websiteFont;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.body {
+    background-color: darksalmon;
+}
