@@ -7,6 +7,9 @@
 // Partials - main css files
 @import "partials/*";
 
+//Home
+@import "/home";
+
 .title-container {
     font-family: $websiteFont;
     display: flex;
@@ -15,6 +18,17 @@
     margin-bottom: 20px;
 }
 
-.body {
-    background-color: darksalmon;
+body {
+    background-color: #FBE5D6;
 }
+
+.columnx4 {
+    float: left;
+    width: 25%;
+  }
+
+  .row {
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 66px;
+  }
