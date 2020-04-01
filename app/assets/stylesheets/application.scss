@@ -10,6 +10,12 @@
 //Home
 @import "/home";
 
+//Details
+@import "/details";
+
+//Travel
+@import "/travel";
+
 .title-container {
     font-family: $websiteFont;
     display: flex;
@@ -27,8 +33,46 @@ body {
     width: 25%;
   }
 
-  .row {
+.columnx2-left {
+    float: left;
+    width: 60%;
+}
+
+.columnx2-right {
+    float: right;
+    width: 40%;
+}
+
+.row {
     margin-right: 100px;
-    margin-left: 100px;
-    margin-top: 66px;
+    margin-left: 10px;
+    margin-top: 10px;
   }
+
+
+h1 {
+    font-family: $websiteFont;
+    margin-top: 80px;
+    margin-left: 94px;
+    margin-bottom: 40px;
+    font-size: 32pt;
+}
+
+p {
+    font-family: $websiteFont;
+    font-size: 14pt;
+    margin-left: 94px;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-family: $websiteFont;
+    margin-top: 40px;
+    margin-left: 94px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    
+}
+
+
+
