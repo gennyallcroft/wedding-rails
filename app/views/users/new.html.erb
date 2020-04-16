@@ -1,7 +1,12 @@
-<h1>Sign Up</h1>
+
+<p>Please enter your details below to continue, or Sign In here.</p>
 <%= form_for @user do |f|%>
-  <%= f.label :username%><br>
-  <%= f.text_field :username%><br>
+  <%= f.label :first_name%><br>
+  <%= f.text_field :first_name%><br>
+  <%= f.label :surname%><br>
+  <%= f.text_field :surname%><br>
+  <%= f.label :email%><br>
+  <%= f.text_field :email%><br>
   <%= f.label :password%><br>
   <%= f.password_field :password%><br>
   <%= f.submit %>

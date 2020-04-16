@@ -18,3 +18,29 @@
   margin-top: 66px;
 }
 
+.welcome-page-image {
+  height: 30%;
+  width: 30%;
+  /* position: absolute; */
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  min-height: 100px;
+  max-height: 100px;
+  min-width: 336px;
+  max-width: 336px;
+}
+
+.frame {
+  height: 130px;
+  // white-space: nowrap;
+  // text-align: center;
+  position: relative;
+}
+
+.helper {
+  // display: inline-block;
+  // height: 100%;
+  // vertical-align: middle;
+}
+
