@@ -1,13 +1,25 @@
 
-<p>Please enter your details below to continue, or Sign In here.</p>
+<div class="sign-up-text"> Please enter your details below to continue, or Sign In here.</div>
+<center><div class="form-background" >
 <%= form_for @user do |f|%>
+  <div class="label">
   <%= f.label :first_name%><br>
+  </div>
   <%= f.text_field :first_name%><br>
+  <div class="label">
   <%= f.label :surname%><br>
+  </div>
   <%= f.text_field :surname%><br>
+  <div class="label">
   <%= f.label :email%><br>
+  </div>
   <%= f.text_field :email%><br>
+  <div class="label">
   <%= f.label :password%><br>
+  </div>
   <%= f.password_field :password%><br>
   <%= f.submit %>
 <%end%>
+</div>
+</center>
+
