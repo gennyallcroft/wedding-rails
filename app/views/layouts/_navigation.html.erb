@@ -1,6 +1,11 @@
 <% if logged_in? %>
-<div class="nav nav-pills nav-justified">
+<div class="welcome-row">
+<div class="welcome-text"> Welcome <%= current_user.first_name %> |
+ <%= link_to "Log out", logout_path %>
+ </div>
+</div>
   <center>
+  <div class="nav nav-pills nav-justified">
     <div class="nav-row">
       <div class="columnx4">
         <div class="nav-item">
@@ -24,7 +29,6 @@
       </div>
     </div>
   </center>
-   <div class="welcome-text"> Welcome </div>
 </div>
 <%else%>
 <div class="nav nav-pills nav-justified">
