@@ -1,6 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/*
+ *= require rails_bootstrap_forms
+ */
+
+ @import "rails_bootstrap_forms";
+
 // Variables
 @import "base/variables";
 
@@ -19,6 +25,10 @@
 //Users
 @import "/users";
 
+//Sessions
+@import "/sessions";
+
+
 .title-container {
     font-family: $websiteFont;
     display: flex;
@@ -28,7 +38,7 @@
 }
 
 body {
-    background-color: #FBE5D6;
+    background-color: $websiteColor;
 }
 
 .columnx4 {
@@ -88,5 +98,16 @@ h2 {
     
 }
 
+.btn {
+
+    color: white;
+    background: rgb(24,24,24);
+    background: linear-gradient(90deg, rgba(24,24,24,1) 0%, rgba(37,37,41,1) 100%);
+    text-shadow: 0px  -1px 0px rgba(0,0,0,.5);
+    text-shadow: 0px -1px 0px rgba(0,0,0,.5);
+    -webkit-box-shadow: 0px 1px 0px #a3abbe, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+    -moz-box-shadow: 0px 1px 0px #a3abbe, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+    box-shadow: 0px 1px 0px #a3abbe, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+}
 
 

@@ -1,24 +1,14 @@
 
-<div class="sign-up-text"> Please enter your details below to continue, or Sign In here.</div>
+<div class="sign-up-text"> Please enter your details below to continue, or, if you have already visited the site, you can <%= link_to 'Sign In', '/login', method: :get %> here.</div>
 <center><div class="form-background" >
-<%= form_for @user do |f|%>
-  <div class="label">
-  <%= f.label :first_name%><br>
-  </div>
-  <%= f.text_field :first_name%><br>
-  <div class="label">
-  <%= f.label :surname%><br>
-  </div>
-  <%= f.text_field :surname%><br>
-  <div class="label">
-  <%= f.label :email%><br>
-  </div>
-  <%= f.text_field :email%><br>
-  <div class="label">
-  <%= f.label :password%><br>
-  </div>
-  <%= f.password_field :password%><br>
-  <%= f.submit %>
+<%= bootstrap_form_for @user do |f|%>
+  <%= f.text_field :first_name%>
+  <%= f.text_field :surname%>
+  <%= f.text_field :email%>
+  <%= f.password_field :password%>
+  <center>
+  <%= f.submit 'Continue' %>
+  </center>
 <%end%>
 </div>
 </center>
