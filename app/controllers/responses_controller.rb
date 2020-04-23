@@ -12,14 +12,21 @@ class ResponsesController < ApplicationController
 
     def create
         @response = Response.new(response_params)
-
+        p "response before saving"
+        p @response
         @response.save
-        redirect_to @response
+
+        p "response after saving:"
+        p @response
+        p "response id"
+        p params[:id]
+        p @id = @response.id
+        redirect_to controller: 'responses'
     end
 
     private
     def response_params
-        params.require(:response).permit(:name, :text, :rsvp, :dietary_requirements)
+        params.require(:response).permit(:name, :text, :rsvp, :dietary_requirements, :diet_details)
     end
 
 
