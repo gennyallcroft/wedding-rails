@@ -19,7 +19,7 @@ class ResponsesController < ApplicationController
 
     private
     def response_params
-        params.require(:response).permit(:name, :text)
+        params.require(:response).permit(:name, :text, :rsvp, :dietary_requirements)
     end
 
 

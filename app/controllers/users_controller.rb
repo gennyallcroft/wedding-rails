@@ -8,10 +8,15 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(params.require(:user).permit(:username,        
-    :password, :first_name, :surname, :email))
-    p "user created:"
-    p @user
-    session[:user_id] = @user.id
-    redirect_to '/home/index'
+    :password, :first_name, :surname, :email, :password_confirmation))
+    @user.first_name = @user.first_name.capitalize
+    @user.surname = @user.surname.capitalize
+
+    if @user.save
+      session[:user_id] = @user.id
+      redirect_to '/home/index'
+    else
+      render '/users/new'
+    end
  end
 end
