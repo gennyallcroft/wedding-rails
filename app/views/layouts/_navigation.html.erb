@@ -19,7 +19,11 @@
       </div>
       <div class="columnx4">
         <div class="nav-item">
+        <% if !responded? %>
           <%= link_to 'RSVP', new_response_path, class: 'nav-link' %>
+        <% else %>
+        <%= link_to 'RSVP', response_path(current_response), class: 'nav-link' %>
+        <% end %>
         </div>
       </div>
       <div class="columnx4">
