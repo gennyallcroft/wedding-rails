@@ -10,6 +10,16 @@ class ResponsesController < ApplicationController
     def new
     end
 
+    def edit
+        @response = Response.find(params[:id])
+    end
+    
+    def update
+        @response = Response.find(params[:id])
+        @response.update(rsvp: params[:response][:rsvp], dietary_requirements: params[:response][:dietary_requirements], diet_details: params[:response][:diet_details], text: params[:response][:text])
+        redirect_to response_path(@response)
+    end
+
     def create
         @response = Response.new(response_params.merge(user_id: current_user.id))
         @response.save

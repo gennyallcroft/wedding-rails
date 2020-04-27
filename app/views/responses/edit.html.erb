@@ -1,0 +1,44 @@
+<div class="sign-up-text"> Please let us know if you can make it to the wedding by filling in the form by 1 May 2021 at the latest.</div>
+
+<center><div class="form-background" >
+<%= form_for @response do |form| %>
+  <div class="form-group">
+  <label for="guest_name">Guest Name</label>
+  <div class="guest-name-text"> <%= current_user.first_name %> <%= current_user.surname %> </div>
+  </div>
+
+  <div class="form-group">
+  <label for="rsvp">Can you make it to the wedding?</label><br>
+  <input id="rsvp_yes" name="response[rsvp]" type="radio" value="Yes" />
+
+  <label  class="radio-inline" for="rsvp_yes">Yes</label>
+  <input id="rsvp_no" name="response[rsvp]" type="radio" value="No" />
+  <label  class="radio-inline" for="rsvp_no">No</label>
+  </div>
+
+   <div class="form-group">
+  <label for="dietary_requirements">Dietary Requirements</label><br>
+  <input id="dietary_requirements_no" name="response[dietary_requirements]" type="radio" value="No" />
+  <label  class="radio-inline" for="dietary_requirements_no">No</label>
+  <input id="dietary_requirements_yes" name="response[dietary_requirements]" type="radio" value="Yes (please specify)" />
+  <label  class="radio-inline" for="dietary_requirements_yes">Yes</label>
+  <input class="form-control" type="text" name="response[diet_details]" id="diet_details">
+  </div>
+
+  <div class="form-group">
+  <label for="text">Any comments?</label>
+  <input class="form-control" type="text" name="response[text]" id="text">
+  </div>
+
+
+  <center>
+  <input type="submit" name="commit" value="RSVP" class="btn btn-secondary" data-disable-with="RSVP">
+  </center>
+     
+  <% end %>
+ </div>
+  </center>
+
+
+
+
