@@ -11,8 +11,8 @@
  
   <% @responses.each do |response| %>
     <tr>
-      <td><%= response.name %></td>
-      <td><%= response.text %></td>
+      <td><%= response.rsvp %></td>
+      <td><%= response.dietary_requirements %></td>
       <td><%= link_to 'Show', response_path(response) %></td>
     </tr>
   <% end %>

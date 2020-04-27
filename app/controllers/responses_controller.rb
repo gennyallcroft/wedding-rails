@@ -11,17 +11,11 @@ class ResponsesController < ApplicationController
     end
 
     def create
-        @response = Response.new(response_params)
-        p "response before saving"
-        p @response
+        @response = Response.new(response_params.merge(user_id: current_user.id))
         @response.save
-
         p "response after saving:"
         p @response
-        p "response id"
-        p params[:id]
-        p @id = @response.id
-        redirect_to controller: 'responses'
+        redirect_to @response
     end
 
     private

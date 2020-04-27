@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_23_162608) do
+ActiveRecord::Schema.define(version: 2020_04_27_085111) do
 
   create_table "responses", force: :cascade do |t|
     t.string "name"
@@ -20,7 +20,8 @@ ActiveRecord::Schema.define(version: 2020_04_23_162608) do
     t.string "rsvp"
     t.string "dietary_requirements"
     t.string "diet_details"
-    t.integer "response_id"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_responses_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -33,4 +34,5 @@ ActiveRecord::Schema.define(version: 2020_04_23_162608) do
     t.string "email"
   end
 
+  add_foreign_key "responses", "users"
 end

@@ -1,7 +1,6 @@
 class User < ApplicationRecord
     has_many :responses
 
-
     has_secure_password validations: false
 
     validates :first_name, presence: {message: 'Please enter your first name'}
