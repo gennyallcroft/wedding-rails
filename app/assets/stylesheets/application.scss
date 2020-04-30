@@ -28,6 +28,9 @@
 //Sessions
 @import "/sessions";
 
+//Responses
+@import "/responses";
+
 
 .title-container {
     font-family: $websiteFont;
@@ -87,6 +90,7 @@ p {
     font-size: 14pt;
     margin-left: 94px;
     margin-bottom: 25px;
+    
 }
 
 h2 {
