@@ -22,8 +22,20 @@ require("channels")
 $(document).ready(function(e){
 
   $("#rsvp_yes").click(function(){
-    console.log("before show");
     $(".diet").show();
-    console.log("after show");
   });
+
+  $("#rsvp_no").click(function(){
+    $(".diet").hide();
+  });
+
+  $("#dietary_requirements_no").click(function(){
+    $("#diet_details").hide();
+  });
+
+  $("#dietary_requirements_yes").click(function(){
+    $("#diet_details").show();
+  });
+
+
 });

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'fa_qs/index'
   get 'travel/index'
   get 'details/index'
   get 'home/index'

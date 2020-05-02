@@ -8,25 +8,36 @@
 </div>
 <div class="form-group">
 <% if @response.rsvp == "No" %>
-<div class="guest-name-text"> You are not able to make it to the wedding </div>
+<div class="guest-name-text"> We are sorry to hear that you are not able to make it to the wedding </div>
 <% else %>
-<div class="guest-name-text"> You are coming to the wedding </div>
+<div class="guest-name-text"> We are delighted that you are coming to the wedding </div>
 <% end %>
 </div>
 
 <div class="form-group">
-<% if @response.dietary_requirements == "No" %>
-<div class="guest-name-text"> You do not have any dietary requirements </div>
-<% else %>
-<div class="guest-name-text"> Your dietary requirements are: <%= @response.diet_details %> </div>
+<% if @response.rsvp == "Yes" %>
+  <% if @response.dietary_requirements == "No" %>
+  <div class="guest-name-text"> You do not have any dietary requirements </div>
+  <% else %>
+  <div class="guest-name-text"> Your dietary requirements are: <%= @response.diet_details %> </div>
+  <% end %>
 <% end %>
 </div>
 
 
 <div class="form-group">
-  <label for="guest_name">Any comments?</label>
+<% if @response.text != "" %>
+  <label for="guest_name">Your extra comments: </label>
   <div class="guest-name-text"> <%= @response.text %> </div>
+<% end %>
 </div>
 
+<div class="form-group">
+    <div class="guest-name-text">You can edit your response up to 1 May 2021 by clicking the button below </div>
+</div>
 
-<%= link_to 'Edit', edit_response_path(@response) %>
+<center>
+<div class="btn btn-secondary">
+<%=  link_to 'Edit', edit_response_path(@response) %>
+</div>
+</center>

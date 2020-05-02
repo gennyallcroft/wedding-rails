@@ -9,26 +9,33 @@
 
   <div class="form-group">
   <label for="rsvp">Can you make it to the wedding?</label><br>
-  <input id="rsvp_yes" name="response[rsvp]" type="radio" value="Yes" />
-
-  <label  class="radio-inline" for="rsvp_yes">Yes</label>
-  <input id="rsvp_no" name="response[rsvp]" type="radio" value="No" />
-  <label  class="radio-inline" for="rsvp_no">No</label>
+  <div class="form-yes">
+    <input id="rsvp_yes" name="response[rsvp]" type="radio" value="Yes" />
+    <label  class="radio-inline" for="rsvp_yes">Yes, I'll be there </label>
+  </div>
+  <div class="form-no">
+    <input id="rsvp_no" name="response[rsvp]" type="radio" value="No" />
+    <label  class="radio-inline" for="rsvp_no">No, sorry I can't make it</label>
+  </div>
   </div>
 
    <div class="form-group" >
    <div class="diet">
-  <label for="dietary_requirements">Dietary Requirements</label><br>
-  <input id="dietary_requirements_no" name="response[dietary_requirements]" type="radio" value="No" />
-  <label  class="radio-inline" for="dietary_requirements_no">No</label>
-  <input id="dietary_requirements_yes" name="response[dietary_requirements]" type="radio" value="Yes (please specify)" />
-  <label  class="radio-inline" for="dietary_requirements_yes">Yes</label>
+  <label for="dietary_requirements">Do you have any dietary requirements?</label><br>
+  <div class="diet-details-no">
+    <input id="dietary_requirements_no" name="response[dietary_requirements]" type="radio" value="None" />
+    <label  class="radio-inline" for="dietary_requirements_no">No</label>
+  </div>
+  <div class="diet-details-yes">
+    <input id="dietary_requirements_yes" name="response[dietary_requirements]" type="radio" value="Yes (please specify)" />
+    <label  class="radio-inline" for="dietary_requirements_yes">Yes (please specify) </label>
+  </div>
   <input class="form-control" type="text" name="response[diet_details]" id="diet_details">
   </div>
   </div>
 
   <div class="form-group">
-  <label for="text">Any comments?</label>
+  <label for="text">Any extra comments? </label>
   <input class="form-control" type="text" name="response[text]" id="text">
   </div>
 
@@ -36,8 +43,7 @@
   <center>
   <input type="submit" name="commit" value="RSVP" class="btn btn-secondary" data-disable-with="RSVP">
   </center>
-     
-  <li><%= current_user.first_name %><a data-js-hide-link="true" href="">Hide</a></li>
+ 
 
   <% end %>
  </div>

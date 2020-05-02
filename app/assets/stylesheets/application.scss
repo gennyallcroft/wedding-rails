@@ -42,11 +42,12 @@
 
 body {
     background-color: $websiteColor;
+    
 }
 
 .columnx4 {
     float: left;
-    width: 25%;
+    width: 20%;
   }
 
 .columnx2-centred-left {
@@ -62,25 +63,21 @@ body {
 
 .columnx2-left {
     float: left;
-    width: 60%;
+    width: 80%;
 }
 
 .columnx2-right {
     float: right;
-    width: 40%;
+    width: 20%;
 }
 
 .row {
-    margin-right: 100px;
-    margin-left: 10px;
     margin-top: 10px;
   }
 
 
 h1 {
     font-family: $websiteFont;
-    margin-top: 80px;
-    margin-left: 94px;
     margin-bottom: 40px;
     font-size: 32pt;
 }
@@ -88,16 +85,20 @@ h1 {
 p {
     font-family: $websiteFont;
     font-size: 14pt;
-    margin-left: 94px;
     margin-bottom: 25px;
     
 }
 
 h2 {
     font-family: $websiteFont;
-    margin-top: 40px;
-    margin-left: 94px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    
+}
+
+h3 {
+    font-family: $websiteFont;
+    margin-bottom: 20px;
     font-weight: bold;
     
 }
@@ -112,6 +113,11 @@ h2 {
     -webkit-box-shadow: 0px 1px 0px #a3abbe, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
     -moz-box-shadow: 0px 1px 0px #a3abbe, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
     box-shadow: 0px 1px 0px #a3abbe, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+}
+
+.cancel {
+    
+    
 }
 
 
