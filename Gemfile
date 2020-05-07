@@ -28,13 +28,8 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-group :development, :test do 
-  gem 'sqlite3'    #gem to use in development-test environment
-end
+ gem 'pg' 
 
-group :production do 
- gem 'pg'         #gem to use in production environment
-end
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
