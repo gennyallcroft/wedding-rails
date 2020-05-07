@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2020_04_27_085111) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "responses", force: :cascade do |t|
     t.string "name"
     t.text "text"
@@ -20,7 +23,7 @@ ActiveRecord::Schema.define(version: 2020_04_27_085111) do
     t.string "rsvp"
     t.string "dietary_requirements"
     t.string "diet_details"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_responses_on_user_id"
   end
 
