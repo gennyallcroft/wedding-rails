@@ -16,17 +16,10 @@ class ResponsesController < ApplicationController
     
     def update
         @response = Response.find(params[:id])
-        p "response before editing"
-        p @response
-        @response.update(rsvp: params[:response][:rsvp], dietary_requirements: params[:response][:dietary_requirements], diet_details: params[:response][:diet_details], text: params[:response][:text])
-        if @response.rsvp === "No"
-            @response.dietary_requirements = nil
-            @response.diet_details = nil
-        end
-        
-        p "response after update"
-        p @response
+        @response.update(rsvp: params[:response][:rsvp], text: params[:response][:text])
+        @response.update(dietary_requirements: params[:response][:dietary_requirements], diet_details: params[:response][:diet_details])   
         redirect_to response_path(@response)
+
     end
 
     def create
