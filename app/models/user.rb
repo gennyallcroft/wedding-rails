@@ -1,6 +1,5 @@
 class User < ApplicationRecord
     has_many :responses
-    has_many :plus1s
 
     has_secure_password validations: false
 

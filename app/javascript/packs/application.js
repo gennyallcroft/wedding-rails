@@ -37,5 +37,36 @@ $(document).ready(function(e){
     $("#diet_details").show();
   });
 
+  $("#add_plus1").click(function(){
+    $(".plus1").show();
+    $("#remove_plus1").show();
+    $("#add_plus1").hide();
+
+
+  });
+
+  $("#remove_plus1").click(function(){
+    $(".plus1").hide();
+    $("#remove_plus1").hide();
+    $("#add_plus1").show();
+  });
+
+  $("#plus1_rsvp_yes").click(function(){
+    $(".plus1_diet").show();
+  });
+
+  $("#plus1_rsvp_no").click(function(){
+    $(".plus1_diet").hide();
+  });
+
+  $("#plus1_dietary_requirements_no").click(function(){
+    $("#plus1_diet_details").hide();
+  });
+
+  $("#plus1_dietary_requirements_yes").click(function(){
+    $("#plus1_diet_details").show();
+  });
+
+
 
 });
