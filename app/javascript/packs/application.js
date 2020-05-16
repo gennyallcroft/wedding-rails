@@ -22,49 +22,49 @@ require("channels")
 $(document).ready(function(e){
 
   $("#rsvp_yes").click(function(){
-    $(".diet").show();
+    $(".diet").show("fast");
   });
 
   $("#rsvp_no").click(function(){
-    $(".diet").hide();
+    $(".diet").hide("fast");
   });
 
   $("#dietary_requirements_no").click(function(){
-    $("#diet_details").hide();
+    $("#diet_details").hide("fast");
   });
 
   $("#dietary_requirements_yes").click(function(){
-    $("#diet_details").show();
+    $("#diet_details").show("fast");
   });
 
   $("#add_plus1").click(function(){
-    $(".plus1").show();
-    $("#remove_plus1").show();
+    $(".plus1").show("fast");
+    $("#remove_plus1").css( "display", "inline-block" )
     $("#add_plus1").hide();
 
 
   });
 
   $("#remove_plus1").click(function(){
-    $(".plus1").hide();
+    $(".plus1").hide("fast");
     $("#remove_plus1").hide();
     $("#add_plus1").show();
   });
 
   $("#plus1_rsvp_yes").click(function(){
-    $(".plus1_diet").show();
+    $(".plus1_diet").show("fast");
   });
 
   $("#plus1_rsvp_no").click(function(){
-    $(".plus1_diet").hide();
+    $(".plus1_diet").hide("fast");
   });
 
   $("#plus1_dietary_requirements_no").click(function(){
-    $("#plus1_diet_details").hide();
+    $("#plus1_diet_details").hide("fast");
   });
 
   $("#plus1_dietary_requirements_yes").click(function(){
-    $("#plus1_diet_details").show();
+    $("#plus1_diet_details").show("fast");
   });
 
 

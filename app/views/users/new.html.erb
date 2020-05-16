@@ -1,6 +1,6 @@
 
 <div class="sign-up-text"> Please enter your details below to continue, or, if you have already visited the site, you can <%= link_to 'Sign In', '/login', method: :get %> here.</div>
-<center><div class="form-background" >
+<center><div class="form-background-sign-in" >
 <%= bootstrap_form_for @user do |f|%>
   <%= f.text_field :first_name%>
   <%= f.text_field :surname%>

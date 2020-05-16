@@ -1,7 +1,6 @@
 
-<div class="sign-up-text"> Please see your RSVP for the wedding below. </div>
 
-<center><div class="form-background" >
+<center><div class="show-rsvp-form-background" >
 <div class="form-group">
   <label for="guest_name">Guest Name</label>
   <div class="guest-name-text"> <%= current_user.first_name %> <%= current_user.surname %> </div>
@@ -15,27 +14,46 @@
     <div class="guest-name-text"> We are sorry to hear that you and <%= @response.plus1_first_name %> are not able to make it to the wedding </div>
 <% end %>
     <% else %>
-  <% if @response.plus1_first_name == nil || @response.plus1_first_name == ""  %>
+  
+  
+  
+  
+    <% if @response.plus1_first_name == nil || @response.plus1_first_name == ""  %>
 <div class="guest-name-text"> We are delighted that you are coming to the wedding </div>
+<% elsif @response.plus1_rsvp === "No" %>
+<div class="guest-name-text"> We are delighted that you are coming to the wedding. Sorry to hear that <%= @response.plus1_first_name %> can't make it </div>
 <% else %>
 <div class="guest-name-text"> We are delighted that you and <%= @response.plus1_first_name %> are coming to the wedding </div>
 <% end %>
 <% end %>
 
-
 </div>
 
 <div class="form-group">
 <% if @response.rsvp === "Yes" %>
-  <% if @response.dietary_requirements === "None" && @response.plus1_dietary_requirements == "None" %>
+  <% if @response.dietary_requirements === "None" && (@response.plus1_dietary_requirements == "None" || @response.plus1_dietary_requirements == nil)%>
   <div class="guest-name-text"> You do not have any dietary requirements </div>
   <% else %>
-    <% if @response.plus1_first_name == nil || @response.plus1_first_name == ""  %>
+    <% if @response.plus1_first_name == nil || @response.plus1_first_name == "" || (@response.plus1_rsvp === "No") %>
     <div class="guest-name-text"> Your dietary requirements are: <%= @response.diet_details %>
+  <% elsif @response.dietary_requirements == "None" && @response.plus1_dietary_requirements != "" %>
+  <div class="guest-name-text"> Your dietary requirements are: </div>
+  <ul>
+  <li><div class="guest-name-text">  <%= current_user.first_name %>: None </div></li>
+  <li><div class="guest-name-text">  <%= @response.plus1_first_name %>: <%= @response.plus1_diet_details %> </div></li>
+  </ul>
+  <% elsif @response.dietary_requirements != "None" && @response.plus1_dietary_requirements == "None" %>
+  <div class="guest-name-text"> Your dietary requirements are: </div>
+  <ul>
+  <li><div class="guest-name-text">  <%= current_user.first_name %>: <%= @response.diet_details %> </div></li>
+  <li><div class="guest-name-text">  <%= @response.plus1_first_name %>: None </div></li>
+  </ul>
   <% else %>
   <div class="guest-name-text"> Your dietary requirements are: </div>
-  <div class="guest-name-text">  <%= current_user.first_name %>: <%= @response.diet_details %> </div>
-  <div class="guest-name-text">  <%= @response.plus1_first_name %>: <%= @response.plus1_diet_details %> </div>
+  <ul>
+  <li><div class="guest-name-text">  <%= current_user.first_name %>: <%= @response.diet_details %> </div></li>
+  <li><div class="guest-name-text">  <%= @response.plus1_first_name %>: <%= @response.plus1_diet_details %> </div></li>
+  </ul>
    <% end %>
   <% end %>
 <% end %>

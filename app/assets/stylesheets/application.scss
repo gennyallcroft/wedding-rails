@@ -42,7 +42,7 @@
 
 body {
     background-color: $websiteColor;
-    
+    font-size: 14pt;
 }
 
 .columnx4 {
@@ -93,6 +93,7 @@ p {
 h2 {
     font-family: $websiteFont;
     margin-bottom: 20px;
+    margin-top: 0px;
     font-weight: bold;
     
 }
@@ -101,11 +102,20 @@ h3 {
     font-family: $websiteFont;
     margin-bottom: 20px;
     font-weight: bold;
+    margin-top: 40px;
     
 }
 
-.btn {
+.h3-first {
+    font-family: $websiteFont;
+    margin-bottom: 20px;
+    font-weight: bold;
+    margin-top: 0px;
+    font-size: 24px;
+}
 
+.btn {
+    font-size: 14pt !important;
     color: white;
     margin-top: 22px;
     margin-bottom: 5px;
@@ -128,13 +138,14 @@ h3 {
 }
 
 .form-background-sign-in {
-    width: 300px;
+    width: 35%;
     border: 1px solid black;
-    padding-left: 42px;
-    padding-right: 42px;
-    padding-top: 34px;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 50px;
     padding-bottom: 20px;
-    margin: 20px;
+    margin-top: 36px;
+    margin-bottom: 55px;
     background-color: white;
     border-radius: 50px;
     text-align: left;
@@ -143,23 +154,44 @@ h3 {
 
 .sign-up-text {
     margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 30px;
     text-align: center;
     font-family: $websiteFont;
-    font-size: 12pt;
+    font-size: 14pt;
 }
 
 .form-background {
-    width: 300px;
+    width: 70%;
     border: 1px solid black;
-    padding-left: 42px;
-    padding-right: 42px;
-    padding-top: 34px;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 50px;
     padding-bottom: 20px;
-    margin: 20px;
+    margin: 60px;
     background-color: white;
     border-radius: 50px;
     text-align: left;
     font-family: $websiteFont;
+}
+
+.show-rsvp-form-background {
+    width: 40%;
+    border: 1px solid black;
+    margin: 60px;
+    background-color: white;
+    border-radius: 50px;
+    text-align: left;
+    font-family: $websiteFont;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px !important;
 }
  
 

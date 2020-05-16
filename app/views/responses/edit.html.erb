@@ -1,6 +1,4 @@
-<div class="sign-up-text"> You can edit your response by amending the form below. </div>
-
-<center><div class="form-background" >
+<center><div class="rsvp-form-background" >
 <%= form_for @response do |form| %>
   <div class="form-group">
   <label for="guest_name">Guest Name</label>
@@ -19,32 +17,79 @@
   </div>
   </div>
 
-
-
    <div class="form-group" >
    <div class="diet">
-   <label for="dietary_requirements">Do you have any dietary requirements?</label><br>
-   <div class="diet-details-no">
-     <input id="dietary_requirements_no" name="response[dietary_requirements]" type="radio" value="None" />
-     <label  class="radio-inline" for="dietary_requirements_no">No</label>
-   </div>
-   <div class="diet-details-yes">
-     <input id="dietary_requirements_yes" name="response[dietary_requirements]" type="radio" value="Yes (please specify)" />
-     <label  class="radio-inline" for="dietary_requirements_yes">Yes (please specify) </label>
-   </div>
-   <input class="form-control" type="text" name="response[diet_details]" id="diet_details">
-   </div>
+  <label for="dietary_requirements">Do you have any dietary requirements?</label><br>
+  <div class="diet-details-no">
+    <input id="dietary_requirements_no" name="response[dietary_requirements]" type="radio" value="None" />
+    <label  class="radio-inline" for="dietary_requirements_no">No</label>
   </div>
+  <div class="diet-details-yes">
+    <input id="dietary_requirements_yes" name="response[dietary_requirements]" type="radio" value="Yes (please specify)" />
+    <label  class="radio-inline" for="dietary_requirements_yes">Yes (please specify) </label>
+  </div>
+  <input class="form-control" type="text" name="response[diet_details]" id="diet_details">
+  </div>
+  </div>
+
+  <div class="plus1">
 
   <div class="form-group">
-  <label for="text">Any extra comments? </label>
-  <input class="form-control" type="text" name="response[text]" id="text">
+  <div class = "plus1-text">
+  <label for="text">If you would like to RSVP for another guest on your invite, please fill in the details below </label>
+  </div>
   </div>
 
-<center>
-    <div class="cancel btn btn-secondary">
-    <%=  link_to 'Cancel', response_path(@response) %>
+     <div class="form-group">
+    <label for="plus1_name">Guest First Name</label>
+    <input class="form-control" type="text" name="response[plus1_first_name]" id="plus1_first_name">
     </div>
+
+    <div class="form-group">
+    <label for="plus1_name">Guest Surname</label>
+    <input class="form-control" type="text" name="response[plus1_surname]" id="plus1_surname">
+    </div>
+
+    <div class="form-group">
+    <label for="rsvp">Can your +1 make it to the wedding?</label><br>
+    <div class="form-yes">
+      <input id="plus1_rsvp_yes" name="response[plus1_rsvp]" type="radio" value="Yes" />
+      <label  class="radio-inline" for="rsvp_yes">Yes, they'll be there </label>
+    </div>
+    <div class="form-no">
+      <input id="plus1_rsvp_no" name="response[plus1_rsvp]" type="radio" value="No" />
+      <label  class="radio-inline" for="rsvp_no">No, sorry they can't make it</label>
+    </div>
+    </div>
+  
+     <div class="form-group" >
+     <div class="plus1_diet">
+    <label for="dietary_requirements">Does your +1 have any dietary requirements?</label><br>
+    <div class="diet-details-no">
+      <input id="plus1_dietary_requirements_no" name="response[plus1_dietary_requirements]" type="radio" value="None" />
+      <label  class="radio-inline" for="dietary_requirements_no">No</label>
+    </div>
+    <div class="diet-details-yes">
+      <input id="plus1_dietary_requirements_yes" name="response[plus1_dietary_requirements]" type="radio" value="Yes (please specify)" />
+      <label  class="radio-inline" for="dietary_requirements_yes">Yes (please specify) </label>
+    </div>
+    <input class="form-control" type="text" name="response[plus1_diet_details]" id="plus1_diet_details">
+    </div>
+ 
+   </div>
+
+   <div class="form-group">
+   <label for="text">Any extra comments? </label>
+   <input class="form-control" type="text" name="response[text]" id="text">
+   </div>
+   </div>
+  
+    <center>
+
+  <div value=" Add +1" class="btn btn-secondary" id="add_plus1" >Add +1 </div>
+
+  <div value="Remove +1" class="btn btn-secondary" id="remove_plus1" >Remove +1 </div>
+
 
   <input type="submit" name="commit" value=" Update RSVP" class="btn btn-secondary" data-disable-with="RSVP">
 
