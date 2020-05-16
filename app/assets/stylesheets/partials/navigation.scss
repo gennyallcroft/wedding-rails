@@ -5,8 +5,9 @@
     a {
       color: black !important;
       margin-bottom: 20px;
-      font-family: $websiteFont !important;
-      font-size: 16pt;
+      font-family: $navBarFont;
+      font-size: 10pt;
+      font-weight: bold;
     }
   }
 
@@ -16,6 +17,8 @@
   margin-right: 100px;
   margin-left: 100px;
   margin-top: 66px;
+  padding-left: 7%;
+  padding-right: 7%;
 }
 
 .welcome-page-image {
@@ -36,7 +39,7 @@
 }
 
 .welcome-row {
-  background: white !important;
+  background: $navbarColor;
   text-align: right;
   padding-top: 12px;
   padding-right: 20px;
@@ -45,7 +48,8 @@
 
 .welcome-text {
   font-family: $websiteFont;
-  font-size: 14pt !important;
+  font-size: 10pt !important;
+  font-weight: bold;
 }
 
 

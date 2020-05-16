@@ -43,8 +43,9 @@
 body {
     // background-color: $websiteColor;
     background: url( 'pastels.png' );
-    font-size: 14pt;
-    background-size: cover;
+    font-size: 12pt;
+    // background-size: cover;
+    background-repeat: repeat;
 
 }
 
