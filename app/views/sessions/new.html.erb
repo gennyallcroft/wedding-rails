@@ -1,5 +1,7 @@
-<div class="sign-up-text"> Please sign in with your details below, or click <%= link_to 'here', '/users/new', method: :get %> if you are visiting the website for the first time.</div>
+
 <center><div class="form-background-sign-in" >
+<div class="form-heading"> Sign In </div>
+<div class="sign-up-text"> Don't have an account? <%= link_to 'Create Account', '/users/new', method: :get %> </div>
 <%= bootstrap_form_tag url: '/login' do %>
    <div class="form-group">
    <label for="email">Email</label>
