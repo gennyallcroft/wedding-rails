@@ -1,14 +1,13 @@
 
 
 <center><div class="form-background-sign-in" >
-<div class="sign-up-text"> Please enter your details below to continue, or, if you have already visited the site, you can <%= link_to 'Sign In', '/login', method: :get %> here.</div>
+<div class="form-heading"> Create Account </div>
+<div class="sign-up-text"> Already have an account? <%= link_to 'Sign In', '/login', method: :get %> </div>
 <%= bootstrap_form_for @user do |f|%>
   <%= f.text_field :first_name%>
   <%= f.text_field :surname%>
   <%= f.text_field :email%>
-  <div class="password-form-group"><label class="required" for="user_password">Password</label><input class="form-control" type="password" name="user[password]" id="user_password"></div>
-  <small id="passwordHelp" class="form-text text-muted">Password must be at least 6 characters</small>
-  <div class="password-confirmation-form-group"><label for="user_password_confirmation">Password confirmation</label><input class="form-control" type="password" name="user[password_confirmation]" id="user_password_confirmation"></div>
+  <div class="password-form-group"><label class="required" for="user_password">Password (6 or more characters)</label><input class="form-control" type="password" name="user[password]" id="user_password"></div>
   <center>
   <%= f.submit 'Continue' %>
   </center>
