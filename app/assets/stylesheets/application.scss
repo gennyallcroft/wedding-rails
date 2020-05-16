@@ -41,8 +41,11 @@
 }
 
 body {
-    background-color: $websiteColor;
+    // background-color: $websiteColor;
+    background: url( 'pastels.png' );
     font-size: 14pt;
+    background-size: cover;
+
 }
 
 .columnx4 {
