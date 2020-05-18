@@ -1,4 +1,6 @@
-<center><div class="rsvp-form-background" >
+<center><div class="form-background-rsvp" >
+<div class="form-heading-update-rsvp"> Update RSVP </div>
+<div class="rsvp-deadline-text"> Please update your RSVP by <b> 1 May 2021 </b></div>
 <%= form_for @response do |form| %>
   <div class="form-group">
   <label for="guest_name">Guest Name</label>
@@ -36,7 +38,7 @@
 
   <div class="form-group">
   <div class = "plus1-text">
-  <label for="text">If you would like to RSVP for another guest on your invite, please fill in the details below </label>
+  <label for="text">RSVP for someone else: </label>
   </div>
   </div>
 
@@ -86,12 +88,14 @@
   
     <center>
 
-  <div value=" Add +1" class="btn btn-secondary" id="add_plus1" >Add +1 </div>
+    <div value="Cancel" class="btn btn-secondary" ><%= link_to 'Cancel', response_path(current_response), class: 'nav-link' %> </div>
+
+  <div value="Add +1" class="btn btn-secondary" id="add_plus1" >Add +1 </div>
 
   <div value="Remove +1" class="btn btn-secondary" id="remove_plus1" >Remove +1 </div>
 
 
-  <input type="submit" name="commit" value=" Update RSVP" class="btn btn-secondary" data-disable-with="RSVP">
+  <input type="submit" name="commit" value=" Update" class="btn btn-secondary" data-disable-with="RSVP">
 
   </center>
      
