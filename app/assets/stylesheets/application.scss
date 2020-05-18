@@ -150,7 +150,7 @@ h3 {
 }
 
 .form-background-sign-in {
-    width: 50%;
+    width: 40%;
     border: 1px solid black;
     padding-left: 7%;
     padding-right: 7%;
@@ -158,6 +158,20 @@ h3 {
     padding-bottom: 20px;
     margin-top: 36px;
     margin-bottom: 55px;
+    background-color: white;
+    border-radius: 20px;
+    text-align: left;
+    font-family: $websiteFont;
+}
+
+.form-background-rsvp {
+    width: 50%;
+    border: 1px solid black;
+    padding-left: 105px;
+    padding-right: 105px;
+    padding-top: 48px;
+    padding-bottom: 41px;
+    margin: 57px;
     background-color: white;
     border-radius: 20px;
     text-align: left;

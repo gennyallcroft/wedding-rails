@@ -1,6 +1,7 @@
-<div class="sign-up-text"> Please let us know if you can make it to the wedding by filling in the form by <b> 1 May 2021 </b> at the latest.</div>
 
-<center><div class="rsvp-form-background" >
+<center><div class="form-background-rsvp" >
+<div class="form-heading-rsvp"> RSVP </div>
+<div class="rsvp-deadline-text"> Please RSVP by <b> 1 May 2021 </b></div>
 <%= form_with scope: :response, url: responses_path, local: true do |form| %>
   <div class="form-group">
   <label for="guest_name">Guest Name</label>
@@ -15,7 +16,7 @@
   </div>
   <div class="form-no">
     <input id="rsvp_no_way" name="response[rsvp]" type="radio" value="No" />
-    <label  class="radio-inline" for="rsvp_no">No, sorry I can't make it </label>
+    <label  class="radio-inline" for="rsvp_no">No, I can't make it </label>
   </div>
   </div>
 
@@ -38,35 +39,35 @@
 
   <div class="form-group">
   <div class = "plus1-text">
-  <label for="text">If you would like to RSVP for another guest on your invite, please fill in the details below </label>
+  <label for="text">RSVP for someone else: </label>
   </div>
   </div>
 
      <div class="form-group">
-    <label for="plus1_name">Guest First Name</label>
+    <label for="plus1_name">First Name</label>
     <input class="form-control" type="text" name="response[plus1_first_name]" id="plus1_first_name">
     </div>
 
     <div class="form-group">
-    <label for="plus1_name">Guest Surname</label>
+    <label for="plus1_name">Surname</label>
     <input class="form-control" type="text" name="response[plus1_surname]" id="plus1_surname">
     </div>
 
     <div class="form-group">
-    <label for="rsvp">Can your +1 make it to the wedding?</label><br>
+    <label for="rsvp">Can they make it to the wedding?</label><br>
     <div class="form-yes">
       <input id="plus1_rsvp_yes" name="response[plus1_rsvp]" type="radio" value="Yes" />
       <label  class="radio-inline" for="rsvp_yes">Yes, they'll be there </label>
     </div>
     <div class="form-no">
       <input id="plus1_rsvp_no" name="response[plus1_rsvp]" type="radio" value="No" />
-      <label  class="radio-inline" for="rsvp_no">No, sorry they can't make it yyyy</label>
+      <label  class="radio-inline" for="rsvp_no">No, they can't make it </label>
     </div>
     </div>
   
      <div class="form-group" >
      <div class="plus1_diet">
-    <label for="dietary_requirements">Does your +1 have any dietary requirements?</label><br>
+    <label for="dietary_requirements">Do they have any dietary requirements?</label><br>
     <div class="diet-details-no">
       <input id="plus1_dietary_requirements_no" name="response[plus1_dietary_requirements]" type="radio" value="None" />
       <label  class="radio-inline" for="dietary_requirements_no">No</label>
