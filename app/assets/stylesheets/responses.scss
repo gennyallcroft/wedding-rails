@@ -47,6 +47,22 @@
     color: #ce2077;
 }
 
+.show-rsvp-heading {
+    font-weight: bold;
+    font-size: 46pt;
+    text-align: center;
+    color: #ce2077;
+}
+
+.rsvp-confirmation-text {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16pt;
+    color: #2a0948;
+    margin-bottom: 19px;
+}
+
 .rsvp-deadline-text {
     text-align: center;
     margin-top: 10px;
@@ -54,4 +70,17 @@
     font-size: 16pt;
     color: #2a0948;
     margin-bottom: 19px;
+}
+
+.diet-text {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+
+}
+
+.change-rsvp {
+    text-align: center;
+    font-size: 12pt;
 }

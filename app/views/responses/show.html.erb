@@ -1,17 +1,18 @@
 
 
-<center><div class="show-rsvp-form-background" >
+<center><div class="form-background-show-rsvp" >
 <div class="form-group">
-  <label for="guest_name">Guest Name</label>
-  <div class="guest-name-text"> <%= current_user.first_name %> <%= current_user.surname %> </div>
+<div class="show-rsvp-heading"> Thank you </div>
+<div class="rsvp-confirmation-text"> We have received your RSVP </div>
+
 </div>
 
 <div class="form-group">
 <% if @response.rsvp === "No" %>
   <% if @response.plus1_first_name == nil || @response.plus1_first_name == "" %>
-<div class="guest-name-text"> We are sorry to hear that you are not able to make it to the wedding </div>
+<div class="guest-name-text"> We are sorry to hear that you are not able to make it to the wedding. </div>
     <% else %>
-    <div class="guest-name-text"> We are sorry to hear that you and <%= @response.plus1_first_name %> are not able to make it to the wedding </div>
+    <div class="guest-name-text"> We are sorry to hear that you and <%= @response.plus1_first_name %> are not able to make it to the wedding. </div>
 <% end %>
     <% else %>
   
@@ -19,11 +20,11 @@
   
   
     <% if @response.plus1_first_name == nil || @response.plus1_first_name == ""  %>
-<div class="guest-name-text"> We are delighted that you are coming to the wedding </div>
+<div class="guest-name-text"> We are delighted that you are coming to the wedding. </div>
 <% elsif @response.plus1_rsvp === "No" %>
-<div class="guest-name-text"> We are delighted that you are coming to the wedding. Sorry to hear that <%= @response.plus1_first_name %> can't make it </div>
+<div class="guest-name-text"> We are delighted that you are coming to the wedding. Sorry to hear that <%= @response.plus1_first_name %> can't make it. </div>
 <% else %>
-<div class="guest-name-text"> We are delighted that you and <%= @response.plus1_first_name %> are coming to the wedding </div>
+<div class="guest-name-text"> We are delighted that you and <%= @response.plus1_first_name %> are coming to the wedding. </div>
 <% end %>
 <% end %>
 
@@ -32,24 +33,25 @@
 <div class="form-group">
 <% if @response.rsvp === "Yes" %>
   <% if @response.dietary_requirements === "None" && (@response.plus1_dietary_requirements == "None" || @response.plus1_dietary_requirements == nil)%>
-  <div class="guest-name-text"> You do not have any dietary requirements </div>
+  <div class="diet-text"> You do not have any dietary requirements </div>
   <% else %>
     <% if @response.plus1_first_name == nil || @response.plus1_first_name == "" || (@response.plus1_rsvp === "No") %>
-    <div class="guest-name-text"> Your dietary requirements are: <%= @response.diet_details %>
+    <div class="diet-text"> Your dietary requirements: </div>
+    <div class="diet-details"> <%= @response.diet_details %> </div>
   <% elsif @response.dietary_requirements == "None" && @response.plus1_dietary_requirements != "" %>
-  <div class="guest-name-text"> Your dietary requirements are: </div>
+  <div class="diet-text"> Your dietary requirements: </div>
   <ul>
   <li><div class="guest-name-text">  <%= current_user.first_name %>: None </div></li>
   <li><div class="guest-name-text">  <%= @response.plus1_first_name %>: <%= @response.plus1_diet_details %> </div></li>
   </ul>
   <% elsif @response.dietary_requirements != "None" && @response.plus1_dietary_requirements == "None" %>
-  <div class="guest-name-text"> Your dietary requirements are: </div>
+  <div class="diet-text"> Your dietary requirements: </div>
   <ul>
   <li><div class="guest-name-text">  <%= current_user.first_name %>: <%= @response.diet_details %> </div></li>
   <li><div class="guest-name-text">  <%= @response.plus1_first_name %>: None </div></li>
   </ul>
   <% else %>
-  <div class="guest-name-text"> Your dietary requirements are: </div>
+  <div class="diet-text"> Your dietary requirements: </div>
   <ul>
   <li><div class="guest-name-text">  <%= current_user.first_name %>: <%= @response.diet_details %> </div></li>
   <li><div class="guest-name-text">  <%= @response.plus1_first_name %>: <%= @response.plus1_diet_details %> </div></li>
@@ -66,14 +68,13 @@
 <% end %>
 </div>
 
+
+
+
 <div class="form-group">
-    <div class="guest-name-text">You can edit your response up to 1 May 2021 by clicking the button below </div>
+    <div class="change-rsvp"> <%=  link_to 'Back to Home', controller:'home' %>  |  Need to change your RSVP? <%=  link_to 'Update', edit_response_path(@response) %> </div>
 </div>
 
-<center>
-<div class="btn btn-secondary">
-<%=  link_to 'Edit', edit_response_path(@response) %>
-</div>
-</center>
+
 
 </div>
