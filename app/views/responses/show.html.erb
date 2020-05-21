@@ -34,7 +34,7 @@
 <% if @response.rsvp === "Yes" %>
   <% if @response.dietary_requirements === "None" && (@response.plus1_dietary_requirements == "None" || @response.plus1_dietary_requirements == nil)%>
   <div class="diet-text"> Your dietary requirements: </div>
-  <div class="guest-name-text"> You do not have any dietary requirements. </div>
+  <div class="guest-name-text"> None </div>
   <% else %>
     <% if @response.plus1_first_name == nil || @response.plus1_first_name == "" || (@response.plus1_rsvp === "No") %>
     <div class="diet-text"> Your dietary requirements: </div>

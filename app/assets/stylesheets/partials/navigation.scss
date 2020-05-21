@@ -3,14 +3,30 @@
     border-bottom: solid 1.5px black;
     height: 130px;
     a {
-      color: black !important;
+      color: black ;
       margin-bottom: 20px;
       font-family: $navBarFont;
       font-size: 10pt;
       font-weight: bold;
     }
+
+    a:active {
+      color: blue;
+    }
   }
 
+  .nav-link.active a {
+    color: green;
+  }
+
+  .nav-row.active a {
+    color: red;
+  }
+
+  .active {
+    text-decoration: underline;
+    font-family: 'Courier New', Courier, monospace;
+  }
 
 
 .nav-row {
@@ -50,6 +66,10 @@
   font-family: $websiteFont;
   font-size: 10pt !important;
   font-weight: bold;
+}
+
+a:active {
+  text-decoration: underline;
 }
 
 
