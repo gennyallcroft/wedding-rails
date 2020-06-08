@@ -38,35 +38,35 @@
 
   <div class="form-group">
   <div class = "plus1-text">
-  <label for="text">RSVP for someone else: </label>
+  <label for="text">RSVP for another guest on your invitation: </label>
   </div>
   </div>
 
      <div class="form-group">
-    <label for="plus1_name">Guest First Name</label>
+    <label for="plus1_name">First Name</label>
     <input class="form-control" type="text" name="response[plus1_first_name]" id="plus1_first_name">
     </div>
 
     <div class="form-group">
-    <label for="plus1_name">Guest Surname</label>
+    <label for="plus1_name">Surname</label>
     <input class="form-control" type="text" name="response[plus1_surname]" id="plus1_surname">
     </div>
 
     <div class="form-group">
-    <label for="rsvp">Can your +1 make it to the wedding?</label><br>
+    <label for="rsvp">Can they make it to the wedding?</label><br>
     <div class="form-yes">
       <input id="plus1_rsvp_yes" name="response[plus1_rsvp]" type="radio" value="Yes" />
       <label  class="radio-inline" for="rsvp_yes">Yes, they'll be there </label>
     </div>
     <div class="form-no">
       <input id="plus1_rsvp_no" name="response[plus1_rsvp]" type="radio" value="No" />
-      <label  class="radio-inline" for="rsvp_no">No, sorry they can't make it</label>
+      <label  class="radio-inline" for="rsvp_no">No, they can't make it </label>
     </div>
     </div>
   
      <div class="form-group" >
      <div class="plus1_diet">
-    <label for="dietary_requirements">Does your +1 have any dietary requirements?</label><br>
+    <label for="dietary_requirements">Do they have any dietary requirements?</label><br>
     <div class="diet-details-no">
       <input id="plus1_dietary_requirements_no" name="response[plus1_dietary_requirements]" type="radio" value="None" />
       <label  class="radio-inline" for="dietary_requirements_no">No</label>
@@ -90,9 +90,9 @@
 
     <div value="Cancel" class="btn btn-secondary" ><%= link_to 'Cancel', response_path(current_response), class: 'nav-link' %> </div>
 
-  <div value="Add +1" class="btn btn-secondary" id="add_plus1" >Add +1 </div>
+  <div value="Add +1" class="btn btn-secondary" id="add_plus1" >Add Invitee </div>
 
-  <div value="Remove +1" class="btn btn-secondary" id="remove_plus1" >Remove +1 </div>
+  <div value="Remove +1" class="btn btn-secondary" id="remove_plus1" >Remove Invitee </div>
 
 
   <input type="submit" name="commit" value=" Update" class="btn btn-secondary" data-disable-with="RSVP">
