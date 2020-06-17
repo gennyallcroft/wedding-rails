@@ -32,7 +32,14 @@
 @import "/responses";
 
 
-.title-container {
+
+
+// this is for desktop
+@media screen and (max-width : 1500px) {
+
+
+    .title
+-container {
     font-family: $websiteFont;
     display: flex;
     justify-content: space-between;
@@ -41,10 +48,9 @@
 }
 
 body {
-    // background-color: $websiteColor;
     background: url( 'flowers2.jpg' );
     font-size: 12pt;
-    //background-size: cover;
+    background-size: cover;
     background-repeat: repeat;
 
 }
@@ -233,5 +239,241 @@ h3 {
 .form-group {
     margin-bottom: 20px !important;
 }
- 
+
+}
+
+
+// this is for phone
+@media screen and (min-width : 200px) and (max-width : 1024px) {
+    .title
+-container {
+    font-family: $websiteFont;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+body {
+    background: url( 'flowers2.jpg' );
+    font-size: 17pt;
+    background-size: cover;
+    background-repeat: repeat;
+
+}
+
+
+.columnx4 {
+    float: left;
+    width: 20%;
+  }
+
+.columnx2-centred-left {
+    width: 50%;
+    float: left;
+}
+
+
+.columnx2-centred-right {
+    width: 50%;
+    float: left;
+}
+
+.columnx2-left {
+    float: left;
+    width: 80%;
+}
+
+.columnx2-right {
+    float: right;
+    width: 20%;
+}
+
+.row {
+    margin-top: 10px;
+  }
+
+
+h1 {
+    font-family: $websiteFont;
+    margin-bottom: 40px;
+    font-size: 32pt;
+}
+
+p {
+    font-family: $websiteFont;
+    font-size: 14pt;
+    margin-bottom: 25px;
+    text-align: left;
+    
+}
+
+h2 {
+    font-family: 'AR BLANCA';
+    margin-bottom: 20px;
+    margin-top: 0px;
+    font-weight: bold;
+    
+}
+
+h3 {
+    font-family: 'AR BLANCA';
+    margin-bottom: 20px;
+    font-weight: bold;
+    margin-top: 40px;
+    
+}
+
+.h3-first {
+    font-family: 'AR BLANCA';
+    margin-bottom: 20px;
+    font-weight: bold;
+    margin-top: 0px;
+    font-size: 24px;
+}
+
+.btn {
+    font-size: 16pt !important;
+    padding-left: 31px;
+    padding-right: 31px;
+    font-weight: bold;
+    color: white;
+    margin-top: 22px;
+    margin-bottom: 0px;
+    background: #181818;
+    background: linear-gradient(90deg, #181818 0%, #252529 100%);
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.5);
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 1px 0px #a3abbe, 0px 3px 15px rgba(0, 0, 0, 0.4), inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px 0px 3px rgba(255, 255, 255, 0.5);
+    -moz-box-shadow: 0px 1px 0px #a3abbe, 0px 3px 15px rgba(0, 0, 0, 0.4), inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px 0px 3px rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 1px 0px #a3abbe, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+}
+
+.form-heading {
+    font-weight: bold;
+    font-size: 31pt;
+    text-align: center;
+    color: #ce2077;
+    font-family: 'AR BLANCA';
+}
+
+
+
+.intro-text {
+    font-family: $websiteFont;
+    font-size: 14pt;
+    margin-left: 94px;
+    margin-bottom: -10px;
+}
+
+.form-background-sign-in {
+    width: 86%;
+    border: 1px solid black;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 36px;
+    margin-bottom: 55px;
+    background-color: white;
+    border-radius: 20px;
+    text-align: left;
+    font-family: 'AR BLANCA';
+}
+
+.form-control {
+    display: block;
+    height: 39px;
+    padding: 6px 12px;
+    font-size: 31px;
+    line-height: 1.428571429;
+    color: #555555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.form-background-rsvp {
+    width: 50%;
+    border: 1px solid black;
+    padding-left: 105px;
+    padding-right: 105px;
+    padding-top: 48px;
+    padding-bottom: 41px;
+    margin: 57px;
+    background-color: white;
+    border-radius: 20px;
+    text-align: left;
+    font-family: 'AR BLANCA';
+}
+
+.form-background-show-rsvp {
+    width: 50%;
+    border: 1px solid black;
+    padding-left: 105px;
+    padding-right: 105px;
+    padding-top: 48px;
+    padding-bottom: 41px;
+    margin: 57px;
+    background-color: white;
+    border-radius: 20px;
+    text-align: left;
+    font-family: 'AR BLANCA';
+}
+
+.sign-up-text {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-family: 'AR BLANCA';
+    font-size: 14pt;
+    text-align: center;
+}
+
+.form-background {
+    width: 70%;
+    border: 1px solid black;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    margin: 60px;
+    background-color: white;
+    border-radius: 50px;
+    text-align: left;
+    font-family: $websiteFont;
+}
+
+.show-rsvp-form-background {
+    width: 40%;
+    border: 1px solid black;
+    margin: 60px;
+    background-color: white;
+    border-radius: 50px;
+    text-align: left;
+    font-family: $websiteFont;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px !important;
+}
+}
+
+
+
+
+
+
+
+
+
 

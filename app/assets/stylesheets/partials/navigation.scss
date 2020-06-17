@@ -1,3 +1,8 @@
+
+// this is for desktop
+@media screen and (max-width : 1500px) {
+
+
 .nav-pills {
     background: $navbarColor !important;
     border-bottom: solid 1.5px black;
@@ -71,5 +76,88 @@
 a:active {
   text-decoration: underline;
 }
+
+}
+
+
+// this is for phone
+@media screen and (min-width : 768px) and (max-width : 1024px) {
+.nav-pills {
+    background: $navbarColor !important;
+    border-bottom: solid 1.5px black;
+    height: 130px;
+    a {
+      color: black ;
+      margin-bottom: 20px;
+      font-family: $navBarFont;
+      font-size: 12pt;
+      font-weight: bold;
+    }
+
+    a:active {
+      color: blue;
+    }
+  }
+
+  .nav-link.active a {
+    color: green;
+  }
+
+  .nav-row.active a {
+    color: red;
+  }
+
+  .active {
+    text-decoration: underline;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+
+.nav-row {
+  margin-right: 100px;
+  margin-left: 100px;
+  margin-top: 66px;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+.welcome-page-image {
+  height: 30%;
+  width: 30%;
+  top: 0;
+  bottom: 0;
+  margin-top: 15px;
+  min-height: 100px;
+  max-height: 100px;
+  min-width: 336px;
+  max-width: 336px;
+}
+
+.frame {
+  height: 130px;
+  position: relative;
+}
+
+.welcome-row {
+  background: $navbarColor;
+  text-align: right;
+  padding-top: 12px;
+  padding-right: 20px;
+}
+
+
+.welcome-text {
+  font-family: 'AR BLANCA';
+  font-size: 12pt !important;
+  font-weight: bold;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+}
+
+
 
 
