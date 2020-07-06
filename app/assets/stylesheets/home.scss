@@ -3,10 +3,75 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 
-.home-image {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    max-width: 50%;
-    height: auto;
+//src= "<%= asset_path( 'HOMEPAGE-PINK.png' ) %>" class="home-image"
+
+
+
+// .home-image {
+//     margin-top: 50px;
+//     margin-bottom: 50px;
+//     max-width: 50%;
+//     height: auto;
+
+// }
+
+// #home-image {
+//     height: 100%;
+//     width: 100%;
+//     background-size: 102%;
+//     background-repeat: no-repeat;
+//     margin-bottom: 46px;
+//     // margin-left: 40px;
+// }
+  
+
+// this is for desktop
+@media screen and (max-width : 1500px) {
+
+      #home-image{
+          background-image: url('HOMEPAGE-PINK.png');
+          height: 100%;
+          width: 100%;
+          background-size: 87%;
+          background-repeat: no-repeat;
+          background-position: center;
+
+      } 
+  
+
+  .home-container 
+{
+    width: 56%;
+    height: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    
+}
 
 }
+  
+// this is for phone
+@media screen and (min-width : 200px) and (max-width : 1024px) {  
+      #home-image{      
+          background-image: url('HOMEPAGE-PINK-MOBILE2.png');
+          height: 100%;
+          width: 100%;
+          background-repeat: no-repeat;
+          background-position: center;
+      } 
+
+      .home-container 
+      {
+        width: 91%;
+        height: 441px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 46px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+        
+  } 

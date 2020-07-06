@@ -84,6 +84,15 @@ $(document).ready(function(e){
     $("#plus1_diet_details").show("fast");
   });
 
+  $("#hamburger").click(function() {
+    if ($("#myLinks").is(":visible"))
+    $("#myLinks").hide("fast");
+  else
+    $("#myLinks").show("fast");
+  })
+
+
 
 
 });
+
