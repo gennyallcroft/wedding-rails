@@ -18,12 +18,16 @@
 
 <!-- Top Navigation Menu -->
 <div class="topnav">
-  <a href="#home" class="active">Logo</a>
+<div class="welcome-row-mobile">
+<div class="welcome-text-mobile"> Welcome <%= current_user.first_name %> | <a href="/logout"> Log out </a>
+ </div>
+</div>
   <!-- Navigation links (hidden by default) -->
   <div id="myLinks">
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
+    <a href="/home/index">HOME</a>
+    <a href="/details/index">DETAILS</a>
+    <a href="/travel/index">TRAVEL</a>
+    <a href="/fa_qs/index">FAQS</a>
   </div>
   <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
   <a href="javascript:void(0);" class="icon" id="hamburger" >
