@@ -39,10 +39,23 @@
   color: black;
 }
 
-/* Style the active link (or home/logo) */
-.active {
-  background-color: #4CAF50;
-  color: white;
+
+
+.nav-pills-logged-out {
+  background: $navbarColor !important;
+  border-bottom: solid 1.5px black;
+  height: 130px;
+  a {
+    color: black ;
+    margin-bottom: 20px;
+    font-family: $navBarFont;
+    font-size: 12pt;
+    font-weight: bold;
+  }
+
+  a:active {
+    color: blue;
+  }
 }
 
 .nav-pills {
@@ -62,13 +75,6 @@
     }
   }
 
-  .nav-link.active a {
-    color: green;
-  }
-
-  .nav-row.active a {
-    color: red;
-  }
 
   .active {
     text-decoration: underline;
@@ -77,6 +83,14 @@
 
 
 .nav-row {
+  margin-right: 100px;
+  margin-left: 100px;
+  margin-top: 66px;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+.nav-row-logged-out {
   margin-right: 100px;
   margin-left: 100px;
   margin-top: 66px;
@@ -96,7 +110,7 @@
   max-width: 336px;
 }
 
-.frame {
+.frame-logged-out {
   height: 130px;
   position: relative;
 }
@@ -122,83 +136,7 @@ a:active {
 }
 
 
-// this is for phone
-@media screen and (min-width : 768px) and (max-width : 1024px) {
-.nav-pills {
-    background: $navbarColor !important;
-    border-bottom: solid 1.5px black;
-    height: 130px;
-    a {
-      color: black ;
-      margin-bottom: 20px;
-      font-family: $navBarFont;
-      font-size: 12pt;
-      font-weight: bold;
-    }
 
-    a:active {
-      color: blue;
-    }
-  }
-
-  .nav-link.active a {
-    color: green;
-  }
-
-  .nav-row.active a {
-    color: red;
-  }
-
-  .active {
-    text-decoration: underline;
-    font-family: 'Courier New', Courier, monospace;
-  }
-
-
-.nav-row {
-  margin-right: 100px;
-  margin-left: 100px;
-  margin-top: 66px;
-  padding-left: 7%;
-  padding-right: 7%;
-}
-
-.welcome-page-image {
-  height: 30%;
-  width: 30%;
-  top: 0;
-  bottom: 0;
-  margin-top: 15px;
-  min-height: 100px;
-  max-height: 100px;
-  min-width: 336px;
-  max-width: 336px;
-}
-
-.frame {
-  height: 130px;
-  position: relative;
-}
-
-.welcome-row {
-  background: $navbarColor;
-  text-align: right;
-  padding-top: 12px;
-  padding-right: 20px;
-}
-
-
-.welcome-text {
-  font-family: 'AR BLANCA';
-  font-size: 12pt !important;
-  font-weight: bold;
-}
-
-a:active {
-  text-decoration: underline;
-}
-
-}
 
 // this is for phone
 @media screen and (min-width : 200px) and (max-width : 1024px) {  
@@ -208,6 +146,21 @@ a:active {
     background: $navbarColor !important;
     border-bottom: solid 1.5px black;
     height: 0px;
+    a {
+      color: black ;
+      margin-bottom: 20px;
+      font-family: $navBarFont;
+      font-size: 12pt;
+      font-weight: bold;
+    }
+
+  }
+
+  .nav-pills-logged-out {
+    display: block;
+    background: $navbarColor !important;
+    border-bottom: solid 1.5px black;
+    height: 113px;
     a {
       color: black ;
       margin-bottom: 20px;
@@ -235,22 +188,32 @@ a:active {
 
 }
 
+.nav-row-logged-out {
+  display: none;
+  margin-right: 0px;
+  margin-left: 0px; 
+  margin-top: 0px; 
+  padding-left: 0%; 
+  padding-right: 0%; 
+
+}
+
 .welcome-page-image {
   height: 30%;
-  width: 30%;
   top: 0;
   bottom: 0;
   margin-top: 15px;
-  min-height: 100px;
-  max-height: 100px;
-  min-width: 336px;
-  max-width: 336px;
+  min-height: 81px;
+  max-height: 57px;
+  min-width: 273px;
+  max-width: 316px;
 }
 
 .frame {
   height: 130px;
   position: relative;
 }
+
 
 .welcome-row {
   display: none;
@@ -272,11 +235,11 @@ a:active {
 }
 
 .welcome-row-mobile {
-  background: $navbarColor;
+  background: white;
   text-align: right;
   padding-top: 12px;
   padding-right: 20px;
-  height: 55px;
+  height: 52px;
 }
 
 
@@ -286,6 +249,7 @@ a:active {
   font-weight: bold;
   text-align: left;
   padding-left: 20px;
+  padding-top: 5px;
 }
 
 a:active {
@@ -301,6 +265,7 @@ a:active {
   background-color: #333;
   position: relative;
   font-family: 'AR BLANCA';
+  border-bottom: solid 1.5px black;
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
@@ -317,6 +282,17 @@ a:active {
   display: block;
 }
 
+.topnav a.logout {
+  font-family: 'AR BLANCA';
+  font-size: 12pt !important;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 130px;
+  color: blue;
+  padding-top: -68px;
+  margin-top: -36px;
+}
+
 /* Style the hamburger menu */
 .topnav a.icon {
   background: black;
@@ -329,7 +305,7 @@ a:active {
 /* Add a grey background color on mouse-over */
 .topnav a:hover {
   background-color: #ddd;
-  color: black;
+  color: lightgrey;
 }
 
 /* Style the active link (or home/logo) */

@@ -16,11 +16,11 @@
 <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
 <!-- Top Navigation Menu -->
 <div class="topnav">
 <div class="welcome-row-mobile">
-<div class="welcome-text-mobile"> Welcome <%= current_user.first_name %> | <a href="/logout"> Log out </a>
- </div>
+<div class="welcome-text-mobile"> Welcome <%= current_user.first_name %>  </div> 
 </div>
   <!-- Navigation links (hidden by default) -->
   <div id="myLinks">
@@ -28,9 +28,10 @@
     <a href="/details/index">DETAILS</a>
     <a href="/travel/index">TRAVEL</a>
     <a href="/fa_qs/index">FAQS</a>
+    <a href="/logout">LOG OUT</a>
   </div>
   <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-  <a href="javascript:void(0);" class="icon" id="hamburger" >
+  <a href="javascript:void(0);" class="icon" id="hamburger">
     <i class="fa fa-bars"></i>
   </a>
 </div>
@@ -73,7 +74,7 @@
   </center>
 </div>
 <%else%>
-<div class="nav nav-pills nav-justified">
+<div class="nav nav-pills-logged-out nav-justified">
 <div class="frame">
 <span class="helper"></span>
  <center>
