@@ -26,7 +26,13 @@
   <div id="myLinks">
     <a href="/home/index">HOME</a>
     <a href="/details/index">DETAILS</a>
-    <a href="/responses/new">RSVP</a>
+    
+    <% if !responded? %>
+    <%= link_to 'RSVP', new_response_path, class: 'nav-link' %>
+  <% else %>
+  <%= link_to 'RSVP', response_path(current_response), class: 'nav-link' %>
+  <% end %>
+
     <a href="/travel/index">TRAVEL</a>
     <a href="/fa_qs/index">FAQS</a>
     <a href="/logout">LOG OUT</a>
