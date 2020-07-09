@@ -3,6 +3,10 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 
+
+// this is for desktop
+@media screen and (max-width : 1500px) {
+
 .diet {
     display: none;
 }
@@ -93,3 +97,102 @@
     text-align: center;
     font-size: 12pt;
 }
+
+}
+
+// this is for phone
+@media screen and (min-width : 200px) and (max-width : 1024px) {
+
+    .diet {
+        display: none;
+    }
+    
+    #diet_details {
+        display: none;
+    }
+    
+    #remove_plus1 {
+        display: none;
+    }
+    
+    .diet-details-yes {
+        margin-bottom: 5px;
+    }
+    
+    .plus1 {
+        display: none;
+    }
+    
+    .plus1_diet {
+        display: none;
+    }
+    
+    #plus1_diet_details {
+        display: none;
+    }
+    
+    
+    .plus1-text {
+        margin-top: 23px;
+        font-weight: bold;
+        font-size: 16pt;
+        color: #2a0948;
+        margin-bottom: 19px;
+    }
+    
+    .form-heading-rsvp {
+        font-weight: bold;
+        font-size: 42pt;
+        text-align: center;
+        color: #ce2077;
+        font-family: 'AR BLANCA';
+    }
+    
+    .form-heading-update-rsvp {
+        font-weight: bold;
+        font-size: 33pt;
+        text-align: center;
+        color: #ce2077;
+    }
+    
+    .show-rsvp-heading {
+        font-weight: bold;
+        font-size: 42pt;
+        text-align: center;
+        color: #ce2077;
+    }
+    
+    .rsvp-confirmation-text {
+        text-align: center;
+        margin-top: 10px;
+        font-weight: bold;
+        font-size: 16pt;
+        color: #148c60;
+        margin-bottom: 19px;
+        font-family: 'AR BLANCA';
+    }
+    
+    .rsvp-deadline-text {
+        text-align: center;
+        margin-top: 10px;
+        font-weight: bold;
+        font-size: 16pt;
+        color: #148c60;
+        margin-bottom: 19px;
+        font-family: 'AR BLANCA';
+    }
+    
+    .diet-text {
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 5px;
+        font-weight: 700;
+    
+    }
+    
+    .change-rsvp {
+        text-align: center;
+        font-size: 14pt;
+    }
+    
+    }

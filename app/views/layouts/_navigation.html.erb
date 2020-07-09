@@ -20,12 +20,13 @@
 <!-- Top Navigation Menu -->
 <div class="topnav">
 <div class="welcome-row-mobile">
-<div class="welcome-text-mobile"> Welcome <%= current_user.first_name %>  </div> 
+<div class="welcome-text-mobile"> Welcome, <%= current_user.first_name %>   </div> 
 </div>
   <!-- Navigation links (hidden by default) -->
   <div id="myLinks">
     <a href="/home/index">HOME</a>
     <a href="/details/index">DETAILS</a>
+    <a href="/responses/new">RSVP</a>
     <a href="/travel/index">TRAVEL</a>
     <a href="/fa_qs/index">FAQS</a>
     <a href="/logout">LOG OUT</a>
