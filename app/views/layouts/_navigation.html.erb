@@ -50,31 +50,52 @@
     <div class="nav-row">
       <div class="columnx4">
         <div class="nav-item">
+        <div class="active-page-container">
+        <div id="inactive-page-home"></div>
+          <div id="active-page-home"></div>
           <%= link_to 'HOME', {controller: 'home'}, class: 'nav-link' %>
-        </div>
+      </div>
+      </div>
+
       </div>
       <div class="columnx4">
         <div class="nav-item">
+        <div class="active-page-container">
+        <div id="inactive-page-details"></div>
+          <div id="active-page-details"></div>
           <%= link_to 'DETAILS', {controller: 'details'}, class: 'nav-link' %>
         </div>
+        </div>
       </div>
       <div class="columnx4">
         <div class="nav-item">
+        <div class="active-page-container">
+          <div id="active-page-rsvp"></div>
+          <div id="inactive-page-rsvp"></div>
         <% if !responded? %>
           <%= link_to 'RSVP', new_response_path, class: 'nav-link' %>
         <% else %>
         <%= link_to 'RSVP', response_path(current_response), class: 'nav-link' %>
         <% end %>
         </div>
+        </div>
       </div>
       <div class="columnx4">
         <div class="nav-item">
+        <div class="active-page-container">
+        <div id="active-page-travel"></div>
+        <div id="inactive-page-travel"></div>
           <%= link_to 'TRAVEL', {controller: 'travel'}, class: 'nav-link' %>
+        </div>
         </div>
       </div>
       <div class="columnx4">
       <div class="nav-item">
+      <div class="active-page-container">
+      <div id="active-page-faqs"></div>
+      <div id="inactive-page-faqs"></div>
         <%= link_to 'FAQS', {controller: 'fa_qs'}, class: 'nav-link' %>
+      </div>
       </div>
     </div>
     </div>
@@ -85,7 +106,7 @@
 <div class="frame">
 <span class="helper"></span>
  <center>
-  <img src= "<%= asset_path( 'genny&joey.png' ) %>" class="welcome-page-image">
+  <img src= "<%= asset_path( 'genny&joeycentred.png' ) %>" class="welcome-page-image">
  </center>
 </div>
 </div>

@@ -2,6 +2,159 @@
 // this is for desktop
 @media screen and (max-width : 1500px) {
 
+
+  .active-page-container {
+    position: relative;
+    display: inline-block;
+  }
+
+
+
+  #active-page {
+    //background-image: url(menu-active.png);
+    background-size: 66%;
+    background-repeat: no-repeat;
+    height: 107px;
+    width: 165px;
+    background-position: center;
+
+} 
+
+#active-page-home {
+  background-image: url(menu-active.png);
+  background-size: 66%;
+  background-repeat: no-repeat;
+  height: 107px;
+  width: 165px;
+  background-position: center;
+  display: none;
+
+} 
+
+
+#inactive-page-home {
+ // background-image: url(menu-active.png);
+  background-size: 66%;
+  background-repeat: no-repeat;
+  height: 107px;
+  width: 165px;
+  background-position: center;
+  display: block;
+
+} 
+
+#active-page-details {
+  background-image: url(menu-active.png);
+  background-size: 66%;
+  background-repeat: no-repeat;
+  height: 107px;
+  width: 165px;
+  background-position: center;
+  display: none;
+
+} 
+
+
+#inactive-page-details {
+ // background-image: url(menu-active.png);
+  background-size: 66%;
+  background-repeat: no-repeat;
+  height: 107px;
+  width: 165px;
+  background-position: center;
+  display: block;
+
+} 
+
+#active-page-travel {
+  background-image: url(menu-active.png);
+  background-size: 66%;
+  background-repeat: no-repeat;
+  height: 107px;
+  width: 165px;
+  background-position: center;
+  display: none;
+
+} 
+
+
+#inactive-page-travel {
+ // background-image: url(menu-active.png);
+  background-size: 66%;
+  background-repeat: no-repeat;
+  height: 107px;
+  width: 165px;
+  background-position: center;
+  display: block;
+
+} 
+
+#active-page-faqs {
+  background-image: url(menu-active.png);
+  background-size: 66%;
+  background-repeat: no-repeat;
+  height: 107px;
+  width: 165px;
+  background-position: center;
+  display: none;
+
+} 
+
+
+#inactive-page-faqs {
+ // background-image: url(menu-active.png);
+  background-size: 66%;
+  background-repeat: no-repeat;
+  height: 107px;
+  width: 165px;
+  background-position: center;
+  display: block;
+
+} 
+
+#active-page-rsvp {
+  background-image: url(menu-active.png);
+  background-size: 66%;
+  background-repeat: no-repeat;
+  height: 107px;
+  width: 165px;
+  background-position: center;
+  display: none;
+
+} 
+
+
+#inactive-page-rsvp {
+ // background-image: url(menu-active.png);
+  background-size: 66%;
+  background-repeat: no-repeat;
+  height: 107px;
+  width: 165px;
+  background-position: center;
+  display: block;
+
+} 
+
+
+ .nav-link {
+  position: absolute;
+  z-index: 999;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 45%;
+  text-align: center;
+  width: 60%;
+  background-size: 66%;
+  background-repeat: no-repeat;
+  height: 107px;
+  width: 165px;
+  background-position: center;
+  background-image: none;
+
+  }
+
+
   /* Style the navigation menu */
 .topnav {
   display: none;
@@ -41,6 +194,7 @@
 
 
 
+
 .nav-pills-logged-out {
   background: $navbarColor !important;
   border-bottom: solid 1.5px black;
@@ -53,9 +207,7 @@
     font-weight: bold;
   }
 
-  a:active {
-    color: blue;
-  }
+
 }
 
 .nav-pills {
@@ -70,24 +222,22 @@
       font-weight: bold;
     }
 
-    a:active {
-      color: blue;
-    }
+
   }
 
 
-  .active {
-    text-decoration: underline;
-    font-family: 'Courier New', Courier, monospace;
-  }
+  // .active {
+  //   text-decoration: underline;
+
+  // }
 
 
 .nav-row {
   margin-right: 100px;
   margin-left: 100px;
-  margin-top: 66px;
-  padding-left: 7%;
-  padding-right: 7%;
+  margin-top: 15px;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 .nav-row-logged-out {
@@ -129,9 +279,9 @@
   font-weight: bold;
 }
 
-a:active {
-  text-decoration: underline;
-}
+// a:active {
+//   text-decoration: underline;
+// }
 
 }
 

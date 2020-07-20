@@ -22,17 +22,45 @@ require("channels")
 $(document).ready(function(e){
 
       var current_page_URL = location.href;
+      var current_page_pathname = location.pathname;
+      var current_page_path_cut = current_page_pathname.split('/')[1];
+
     $( "a.nav-link" ).each(function() {
      if ($(this).attr("href") !== "#") {
        var target_URL = $(this).prop("href");
        if (target_URL == current_page_URL) {
           $('nav-link').removeClass('active');
           $(this).addClass('active');
+        if (current_page_pathname == "/home/index") {
+          $('#active-page-home').show();
+          $('#inactive-page-home').hide();
+        }
+        if (current_page_pathname == "/home/index") {
+          $('#active-page-home').show();
+          $('#inactive-page-home').hide();
+        }
+        if (current_page_pathname == "/details/index") {
+          $('#active-page-details').show();
+          $('#inactive-page-details').hide();
+        }
+        if (current_page_pathname == "/travel/index") {
+          $('#active-page-travel').show();
+          $('#inactive-page-travel').hide();
+        }
+        if (current_page_pathname == "/fa_qs/index") {
+          $('#active-page-faqs').show();
+          $('#inactive-page-faqs').hide();
+        }
+        if (current_page_path_cut == "responses") {
+          $('#active-page-rsvp').show();
+          $('#inactive-page-rsvp').hide();
+        }
+
           return false;
        }
       }
     });
-  
+
 
 
 
