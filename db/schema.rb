@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_14_092050) do
+ActiveRecord::Schema.define(version: 2020_07_23_122633) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,27 @@ ActiveRecord::Schema.define(version: 2020_05_14_092050) do
     t.string "plus1_dietary_requirements"
     t.string "plus1_diet_details"
     t.string "plus1_rsvp"
+    t.string "guest1_first_name"
+    t.string "guest1_surname"
+    t.string "guest1_rsvp"
+    t.string "guest1_dietary_requirements"
+    t.string "guest1_diet_details"
+    t.string "guest2_first_name"
+    t.string "guest2_surname"
+    t.string "guest2_rsvp"
+    t.string "guest2_dietary_requirements"
+    t.string "guest2_diet_details"
+    t.string "guest3_first_name"
+    t.string "guest3_surname"
+    t.string "guest3_rsvp"
+    t.string "guest3_dietary_requirements"
+    t.string "guest3_diet_details"
+    t.string "guest4_first_name"
+    t.string "guest4_surname"
+    t.string "guest4_rsvp"
+    t.string "guest4_dietary_requirements"
+    t.string "guest4_diet_details"
+    t.integer "number_of_guests"
     t.index ["user_id"], name: "index_responses_on_user_id"
   end
 
