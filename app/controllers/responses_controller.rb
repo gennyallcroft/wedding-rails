@@ -32,11 +32,20 @@ class ResponsesController < ApplicationController
 
     def create
         @response = Response.new(response_params.merge(user_id: current_user.id))
-        # @response.plus1_first_name = @response.plus1_first_name.capitalize
-        # @response.plus1_surname = @response.plus1_surname.capitalize
-        # @response.diet_details = @response.diet_details.capitalize
-        # @response.plus1_diet_details = @response.plus1_diet_details.capitalize
-        # @response.save
+        @response.guest1_first_name = @response.guest1_first_name.capitalize
+        @response.guest1_surname = @response.guest1_surname.capitalize
+        @response.guest1_diet_details = @response.guest1_diet_details.capitalize
+        @response.guest2_first_name = @response.guest2_first_name.capitalize
+        @response.guest2_surname = @response.guest2_surname.capitalize
+        @response.guest2_diet_details = @response.guest2_diet_details.capitalize
+        @response.guest3_first_name = @response.guest3_first_name.capitalize
+        @response.guest3_surname = @response.guest3_surname.capitalize
+        @response.guest3_diet_details = @response.guest3_diet_details.capitalize
+        @response.guest4_first_name = @response.guest4_first_name.capitalize
+        @response.guest4_surname = @response.guest4_surname.capitalize
+        @response.guest4_diet_details = @response.guest4_diet_details.capitalize
+
+        @response.save
         p "response after saving:"
         p @response
         p @response.save!

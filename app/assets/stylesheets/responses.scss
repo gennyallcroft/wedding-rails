@@ -8,8 +8,57 @@
 @media screen and (max-width : 1500px) {
 
 .diet {
+    margin-top: 17px;
+}
+
+    .guest-name-text {
+
+        font-size: 20pt;
+        font-weight: bold;
+        margin-bottom: 11px;
+        color: mediumslateblue;
+        margin-top: 17px;
+
+    }
+
+#response_guest1_diet_details {
     display: none;
 }
+
+#guest1_diet {
+        display: none;
+    }
+
+#response_guest2_diet_details {
+    display: none;
+}
+
+#guest2_diet {
+        display: none;
+    }
+
+#response_guest3_diet_details {
+    display: none;
+}
+
+#guest3_diet {
+        display: none;
+    }
+
+#response_guest4_diet_details {
+    display: none;
+}
+
+#guest4_diet {
+        display: none;
+    }
+    
+
+.guest1 {
+    display: none;
+}
+
+
 
 #diet_details {
     display: none;

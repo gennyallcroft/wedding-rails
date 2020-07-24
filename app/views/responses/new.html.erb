@@ -3,20 +3,23 @@
 <div class="form-heading-rsvp"> RSVP </div>
 <div class="rsvp-deadline-text"> Please RSVP by <b> 1 May 2021 </b></div>
 <%= bootstrap_form_for @response do |f| %>
-<%= f.select :number_of_guests , [["1", 1], ["2", 2], ["3", 3], ["4", 4]], { label: "How many people are on your invitation?", wrapper: { class: 'has-warning', data: { foo: 'bar' } } }, { class: "selectpicker" }%>
+<%= f.select :number_of_guests , [["", 0], ["1", 1], ["2", 2], ["3", 3], ["4", 4]], { label: "How many people are on your invitation?", wrapper: { class: 'has-warning', data: { foo: 'bar' } } }, { class: "selectpicker" }%>
 
+<div class="guest 1">
   <div class="guest-name-text" > Guest 1 </div>
   <%= f.text_field :guest1_first_name, :label => "First Name" %>
   <%= f.text_field :guest1_surname, :label => "Surname" %>
   <label for="response_guest1_rsvp">RSVP</label> <br>
   <div class="radio-row">
 <%= radio_button("response", "guest1_rsvp", "yes", :label => "RSVP") %>
-<%= label_tag(:rsvp_yes, "Yes, I'll be there") %> 
+<%= label_tag(:rsvp_yes, "Will attend") %> 
 </div>
 <div class="radio-row">
 <%= radio_button("response", "guest1_rsvp", "no") %>
-<%= label_tag(:rsvp_no, "No, I can't make it") %>
+<%= label_tag(:rsvp_no, "Unable to attend") %>
 </div>
+<div id="guest1_diet">
+<div class="diet">
 <label for="response_guest1_rsvp">Dietary Requirements?</label> <br>
   <div class="radio-row">
 <%= radio_button("response", "guest1_dietary_requirements", "no") %>
@@ -27,19 +30,25 @@
 <%= label_tag(:dietary_requirements_yes, "Yes (please specify)") %>
 </div>
 <%= f.text_field :guest1_diet_details, :hide_label => true %>
+</div>
+</div>
+</div>
 
+<div class="guest 2">
 <div class="guest-name-text" > Guest 2 </div>
 <%= f.text_field :guest2_first_name, :label => "First Name" %>
 <%= f.text_field :guest2_surname, :label => "Surname" %>
 <label for="response_guest2_rsvp">RSVP</label> <br>
 <div class="radio-row">
 <%= radio_button("response", "guest2_rsvp", "yes", :label => "RSVP") %>
-<%= label_tag(:rsvp_yes, "Yes, I'll be there") %> 
+<%= label_tag(:rsvp_yes, "Will attend") %> 
 </div>
 <div class="radio-row">
 <%= radio_button("response", "guest2_rsvp", "no") %>
-<%= label_tag(:rsvp_no, "No, I can't make it") %>
+<%= label_tag(:rsvp_no, "Unable to attend") %>
 </div>
+<div id="guest2_diet">
+<div class="diet">
 <label for="response_guest2_rsvp">Dietary Requirements?</label> <br>
   <div class="radio-row">
 <%= radio_button("response", "guest2_dietary_requirements", "no") %>
@@ -50,19 +59,25 @@
 <%= label_tag(:dietary_requirements_yes, "Yes (please specify)") %>
 </div>
 <%= f.text_field :guest2_diet_details, :hide_label => true %>
+</div>
+</div>
+</div>
 
+<div class="guest 3">
 <div class="guest-name-text" > Guest 3 </div>
 <%= f.text_field :guest3_first_name, :label => "First Name" %>
 <%= f.text_field :guest3_surname, :label => "Surname" %>
 <label for="response_guest3_rsvp">RSVP</label> <br>
 <div class="radio-row">
 <%= radio_button("response", "guest3_rsvp", "yes", :label => "RSVP") %>
-<%= label_tag(:rsvp_yes, "Yes, I'll be there") %> 
+<%= label_tag(:rsvp_yes, "Will attend") %> 
 </div>
 <div class="radio-row">
 <%= radio_button("response", "guest3_rsvp", "no") %>
-<%= label_tag(:rsvp_no, "No, I can't make it") %>
+<%= label_tag(:rsvp_no, "Unable to attend") %>
 </div>
+<div id="guest3_diet">
+<div class="diet">
 <label for="response_guest3_rsvp">Dietary Requirements?</label> <br>
   <div class="radio-row">
 <%= radio_button("response", "guest3_dietary_requirements", "no") %>
@@ -73,19 +88,25 @@
 <%= label_tag(:dietary_requirements_yes, "Yes (please specify)") %>
 </div>
 <%= f.text_field :guest3_diet_details, :hide_label => true %>
+</div>
+</div>
+</div>
 
+<div class="guest 4">
 <div class="guest-name-text" > Guest 4 </div>
 <%= f.text_field :guest4_first_name, :label => "First Name" %>
 <%= f.text_field :guest4_surname, :label => "Surname" %>
 <label for="response_guest4_rsvp">RSVP</label> <br>
 <div class="radio-row">
 <%= radio_button("response", "guest4_rsvp", "yes", :label => "RSVP") %>
-<%= label_tag(:rsvp_yes, "Yes, I'll be there") %> 
+<%= label_tag(:rsvp_yes, "Will attend") %> 
 </div>
 <div class="radio-row">
 <%= radio_button("response", "guest4_rsvp", "no") %>
-<%= label_tag(:rsvp_no, "No, I can't make it") %>
+<%= label_tag(:rsvp_no, "Unable to attend") %>
 </div>
+<div id="guest4_diet">
+<div class="diet">
 <label for="response_guest4_rsvp">Dietary Requirements?</label> <br>
   <div class="radio-row">
 <%= radio_button("response", "guest4_dietary_requirements", "no") %>
@@ -96,10 +117,14 @@
 <%= label_tag(:dietary_requirements_yes, "Yes (please specify)") %>
 </div>
 <%= f.text_field :guest4_diet_details, :hide_label => true %>
+</div>
+</div>
+</div>
 
 
-   
+   <center>
   <%= f.submit 'RSVP' %>
+  </center>
 
 
 
