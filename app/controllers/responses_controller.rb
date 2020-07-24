@@ -8,6 +8,7 @@ class ResponsesController < ApplicationController
     end
     
     def new
+        @response = Response.new
     end
 
     def edit
@@ -31,13 +32,23 @@ class ResponsesController < ApplicationController
 
     def create
         @response = Response.new(response_params.merge(user_id: current_user.id))
-        @response.plus1_first_name = @response.plus1_first_name.capitalize
-        @response.plus1_surname = @response.plus1_surname.capitalize
-        @response.diet_details = @response.diet_details.capitalize
-        @response.plus1_diet_details = @response.plus1_diet_details.capitalize
+        @response.guest1_first_name = @response.guest1_first_name.capitalize
+        @response.guest1_surname = @response.guest1_surname.capitalize
+        @response.guest1_diet_details = @response.guest1_diet_details.capitalize
+        @response.guest2_first_name = @response.guest2_first_name.capitalize
+        @response.guest2_surname = @response.guest2_surname.capitalize
+        @response.guest2_diet_details = @response.guest2_diet_details.capitalize
+        @response.guest3_first_name = @response.guest3_first_name.capitalize
+        @response.guest3_surname = @response.guest3_surname.capitalize
+        @response.guest3_diet_details = @response.guest3_diet_details.capitalize
+        @response.guest4_first_name = @response.guest4_first_name.capitalize
+        @response.guest4_surname = @response.guest4_surname.capitalize
+        @response.guest4_diet_details = @response.guest4_diet_details.capitalize
+
         @response.save
         p "response after saving:"
         p @response
+        p @response.save!
         if @response.save
             p "HHHORAYYYY_____________________"
         else
@@ -48,7 +59,7 @@ class ResponsesController < ApplicationController
 
     private
     def response_params
-        params.require(:response).permit(:name, :text, :rsvp, :dietary_requirements, :diet_details, :plus1_first_name, :plus1_surname, :plus1_rsvp, :plus1_dietary_requirements, :plus1_diet_details)
+        params.require(:response).permit(:number_of_guests, :guest1_first_name, :guest1_surname, :guest1_rsvp, :guest1_dietary_requirements, :guest1_diet_details, :guest2_first_name, :guest2_surname, :guest2_rsvp, :guest2_dietary_requirements, :guest2_diet_details, :guest3_first_name, :guest3_surname, :guest3_rsvp, :guest3_dietary_requirements, :guest3_diet_details, :guest4_first_name, :guest4_surname, :guest4_rsvp, :guest4_dietary_requirements, :guest4_diet_details )
     end
 
 

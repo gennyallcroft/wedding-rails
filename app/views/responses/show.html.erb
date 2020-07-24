@@ -8,73 +8,79 @@
 </div>
 
 <div class="form-group">
-<% if @response.rsvp === "No" %>
-  <% if @response.plus1_first_name == nil || @response.plus1_first_name == "" %>
-<div class="guest-name-text"> We are sorry to hear that you are not able to make it to the wedding. </div>
-    <% else %>
-    <div class="guest-name-text"> We are sorry to hear that you and <%= @response.plus1_first_name %> are not able to make it to the wedding. </div>
-<% end %>
-    <% else %>
-  
-  
-  
-  
-    <% if @response.plus1_first_name == nil || @response.plus1_first_name == ""  %>
-<div class="guest-name-text"> We are delighted that you are coming to the wedding. </div>
-<% elsif @response.plus1_rsvp === "No" %>
-<div class="guest-name-text"> We are delighted that you are coming to the wedding. Sorry to hear that <%= @response.plus1_first_name %> can't make it. </div>
-<% else %>
-<div class="guest-name-text"> We are delighted that you and <%= @response.plus1_first_name %> are coming to the wedding. </div>
-<% end %>
-<% end %>
 
-</div>
-
-<div class="form-group">
-<% if @response.rsvp === "Yes" %>
-  <% if @response.dietary_requirements === "None" && (@response.plus1_dietary_requirements == "None" || @response.plus1_dietary_requirements == nil)%>
-  <div class="diet-text"> Your dietary requirements: </div>
-  <div class="guest-name-text"> None </div>
+<% if (@response.guest1_first_name != "") && (@response.guest1_first_name != nil) %>
+  <div class="guest-name-text"> <b> <%= @response.guest1_first_name %> <%= @response.guest1_surname %> </b> </div>
+<ul>
+  <% if @response.guest1_rsvp === "no" %>
+<li><div class="rsvp-confirm-text">  RSVP: Unable to attend </div></li>
   <% else %>
-    <% if @response.plus1_first_name == nil || @response.plus1_first_name == "" || (@response.plus1_rsvp === "No") %>
-    <div class="diet-text"> Your dietary requirements: </div>
-    <div class="diet-details"> <%= @response.diet_details %> </div>
-  <% elsif @response.dietary_requirements == "None" && @response.plus1_dietary_requirements != "" %>
-  <div class="diet-text"> Your dietary requirements: </div>
-  <ul>
-  <li><div class="guest-name-text">  <%= current_user.first_name %>: None </div></li>
-  <li><div class="guest-name-text">  <%= @response.plus1_first_name %>: <%= @response.plus1_diet_details %> </div></li>
-  </ul>
-  <% elsif @response.dietary_requirements != "None" && @response.plus1_dietary_requirements == "None" %>
-  <div class="diet-text"> Your dietary requirements: </div>
-  <ul>
-  <li><div class="guest-name-text">  <%= current_user.first_name %>: <%= @response.diet_details %> </div></li>
-  <li><div class="guest-name-text">  <%= @response.plus1_first_name %>: None </div></li>
-  </ul>
-  <% else %>
-  <div class="diet-text"> Your dietary requirements: </div>
-  <ul>
-  <li><div class="guest-name-text">  <%= current_user.first_name %>: <%= @response.diet_details %> </div></li>
-  <li><div class="guest-name-text">  <%= @response.plus1_first_name %>: <%= @response.plus1_diet_details %> </div></li>
-  </ul>
-   <% end %>
+  <li><div class="rsvp-confirm-text"> <b> RSVP: </b> Will be there </div></li>
+    <% if @response.guest1_dietary_requirements === "no" %>
+      <li><div class="rsvp-confirm-text"> <b> Dietary Requirements: </b> None</div></li>
+    <% else %> 
+    <li><div class="rsvp-confirm-text"> <b> Dietary Requirements: </b> <%= @response.guest1_diet_details %> </div></li>
+    <% end %>
   <% end %>
+  </ul>
 <% end %>
+
+<% if (@response.guest2_first_name != "") && (@response.guest2_first_name != nil) %>
+  <div class="guest-name-text"> <b> <%= @response.guest2_first_name %> <%= @response.guest2_surname %> </b> </div>
+<ul>
+  <% if @response.guest2_rsvp === "no" %>
+<li><div class="rsvp-confirm-text"> <b> RSVP: </b> Unable to attend </div></li>
+  <% else %>
+  <li><div class="rsvp-confirm-text"> <b> RSVP: </b> Will be there </div></li>
+    <% if @response.guest2_dietary_requirements === "no" %>
+      <li><div class="rsvp-confirm-text"> <b> Dietary Requirements: </b> None</div></li>
+    <% else %> 
+    <li><div class="rsvp-confirm-text"> <b> Dietary Requirements: </b> <%= @response.guest2_diet_details %> </div></li>
+    <% end %>
+  <% end %>
+  </ul>
+<% end %>
+
+<% if (@response.guest3_first_name != "") && (@response.guest3_first_name != nil) %>
+  <div class="guest-name-text"> <b> <%= @response.guest3_first_name %> <%= @response.guest3_surname %> </b> </div>
+<ul>
+  <% if @response.guest3_rsvp === "no" %>
+<li><div class="rsvp-confirm-text"> <b> RSVP: </b> Unable to attend </div></li>
+  <% else %>
+  <li><div class="rsvp-confirm-text"> <b> RSVP: </b> Will be there </div></li>
+    <% if @response.guest3_dietary_requirements === "no" %>
+      <li><div class="rsvp-confirm-text"> <b> Dietary Requirements: </b> None</div></li>
+    <% else %> 
+    <li><div class="rsvp-confirm-text"> <b> Dietary Requirements: </b> <%= @response.guest3_diet_details %> </div></li>
+    <% end %>
+  <% end %>
+  </ul>
+<% end %>
+
+<% if (@response.guest4_first_name != "") && (@response.guest4_first_name != nil) %>
+  <div class="guest-name-text"> <b> <%= @response.guest4_first_name %> <%= @response.guest4_surname %> </b> </div>
+<ul>
+  <% if @response.guest4_rsvp === "no" %>
+<li><div class="rsvp-confirm-text"> <b> RSVP: </b> Unable to attend </div></li>
+  <% else %>
+  <li><div class="rsvp-confirm-text"> <b> RSVP: </b> Will be there </div></li>
+    <% if @response.guest4_dietary_requirements === "no" %>
+      <li><div class="rsvp-confirm-text"> <b> Dietary Requirements: </b> None</div></li>
+    <% else %> 
+    <li><div class="rsvp-confirm-text"> <b> Dietary Requirements: </b> <%= @response.guest4_diet_details %> </div></li>
+    <% end %>
+  <% end %>
+  </ul>
+<% end %>
+
+
 </div>
+
+
+
 
 <div class="form-group">
-<% if @response.text != "" %>
-  <label for="guest_name">Your extra comments: </label>
-  <div class="guest-name-text"> <%= @response.text %> </div>
-<% end %>
-</div>
-
-
-
-
-<div class="form-group">
-    <div class="change-rsvp"> <%=  link_to 'Back to Home', controller:'home' %>  |  Need to change your RSVP? <%=  link_to 'Update', edit_response_path(@response) %> </div>
-</div>
+    <div class="change-rsvp"> <%=  link_to 'Back to Home', controller:'home' %>  </div>
 
 
 

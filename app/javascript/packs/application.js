@@ -62,64 +62,108 @@ $(document).ready(function(e){
     });
 
 
+    $("select").change(function(){
+      $(this).find("option:selected").each(function(){
+          var optionValue = $(this).attr("value");
+        if(optionValue === "0"){
+            $(".1").hide();
+            $(".2").hide();
+            $(".3").hide();
+            $(".4").hide();
+        }
+          if(optionValue === "1"){
+            $(".1").show();
+            $(".2").hide();
+            $(".3").hide();
+            $(".4").hide();
+          }
+          if(optionValue === "2"){
+            $(".1").show();
+            $(".2").show();
+            $(".3").hide();
+            $(".4").hide();
+          }
+          if(optionValue === "3"){
+            $(".1").show();
+            $(".2").show();
+            $(".3").show();
+            $(".4").hide();
+          }
+          if(optionValue === "4"){
+            $(".1").show();
+            $(".2").show();
+            $(".3").show();
+            $(".4").show();
+          }
+
+      });
+  }).change();
 
 
 
-
-  $("#rsvp_yes").click(function(){
-    $(".diet").show("fast");
+  $("#response_guest1_rsvp_yes").click(function(){
+    $("#guest1_diet").show("fast");
   });
 
-  $("#rsvp_no").click(function(){
-    $(".diet").hide("fast");
+  $("#response_guest1_rsvp_yes").click(function(){
+    $(".guest1_diet").hide("fast");
   });
 
-  $("#dietary_requirements_no").click(function(){
-    $("#diet_details").hide("fast");
+  $("#response_guest1_dietary_requirements_no").click(function(){
+    $("#response_guest1_diet_details").hide("fast");
   });
 
-  $("#dietary_requirements_yes").click(function(){
-    $("#diet_details").show("fast");
+  $("#response_guest1_dietary_requirements_yes").click(function(){
+    $("#response_guest1_diet_details").show("fast");
   });
 
-  $("#add_plus1").click(function(){
-    $(".plus1").show("fast");
-    $("#remove_plus1").css( "display", "inline-block" )
-    $("#add_plus1").hide();
-
-
+  $("#response_guest2_rsvp_yes").click(function(){
+    $("#guest2_diet").show("fast");
   });
 
-  $("#remove_plus1").click(function(){
-    $(".plus1").hide("fast");
-    $("#remove_plus1").hide();
-    $("#add_plus1").show();
+  $("#response_guest2_rsvp_yes").click(function(){
+    $(".guest2_diet").hide("fast");
   });
 
-  $("#plus1_rsvp_yes").click(function(){
-    $(".plus1_diet").show("fast");
+  $("#response_guest2_dietary_requirements_no").click(function(){
+    $("#response_guest2_diet_details").hide("fast");
   });
 
-  $("#plus1_rsvp_no").click(function(){
-    $(".plus1_diet").hide("fast");
+  $("#response_guest2_dietary_requirements_yes").click(function(){
+    $("#response_guest2_diet_details").show("fast");
   });
 
-  $("#plus1_dietary_requirements_no").click(function(){
-    $("#plus1_diet_details").hide("fast");
+  $("#response_guest3_rsvp_yes").click(function(){
+    $("#guest3_diet").show("fast");
   });
 
-  $("#plus1_dietary_requirements_yes").click(function(){
-    $("#plus1_diet_details").show("fast");
+  $("#response_guest3_rsvp_yes").click(function(){
+    $(".guest3_diet").hide("fast");
   });
 
-  $("#hamburger").click(function() {
-    if ($("#myLinks").is(":visible"))
-    $("#myLinks").hide("fast");
-  else
-    $("#myLinks").show("fast");
-  })
+  $("#response_guest3_dietary_requirements_no").click(function(){
+    $("#response_guest3_diet_details").hide("fast");
+  });
 
+  $("#response_guest3_dietary_requirements_yes").click(function(){
+    $("#response_guest3_diet_details").show("fast");
+  });
 
+  $("#response_guest4_rsvp_yes").click(function(){
+    $("#guest4_diet").show("fast");
+  });
+
+  $("#response_guest4_rsvp_yes").click(function(){
+    $(".guest4_diet").hide("fast");
+  });
+
+  $("#response_guest4_dietary_requirements_no").click(function(){
+    $("#response_guest4_diet_details").hide("fast");
+  });
+
+  $("#response_guest4_dietary_requirements_yes").click(function(){
+    $("#response_guest4_diet_details").show("fast");
+  });
 
 
 });
