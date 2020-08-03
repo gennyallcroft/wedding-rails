@@ -152,9 +152,41 @@
 // this is for phone
 @media screen and (min-width : 200px) and (max-width : 1024px) {
 
-    .diet {
+
+    
+#response_guest1_diet_details {
+    display: none;
+}
+
+#guest1_diet {
         display: none;
     }
+
+#response_guest2_diet_details {
+    display: none;
+}
+
+#guest2_diet {
+        display: none;
+    }
+
+#response_guest3_diet_details {
+    display: none;
+}
+
+#guest3_diet {
+        display: none;
+    }
+
+#response_guest4_diet_details {
+    display: none;
+}
+
+#guest4_diet {
+        display: none;
+    }
+    
+
     
     #diet_details {
         display: none;
