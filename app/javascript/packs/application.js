@@ -152,7 +152,7 @@ $(document).ready(function(e){
     $("#guest2_diet").show("fast");
   });
 
-  $("#response_guest2_rsvp_yes").click(function(){
+  $("#response_guest2_rsvp_no").click(function(){
     $(".guest2_diet").hide("fast");
   });
 
@@ -168,7 +168,7 @@ $(document).ready(function(e){
     $("#guest3_diet").show("fast");
   });
 
-  $("#response_guest3_rsvp_yes").click(function(){
+  $("#response_guest3_rsvp_no").click(function(){
     $(".guest3_diet").hide("fast");
   });
 
@@ -184,7 +184,7 @@ $(document).ready(function(e){
     $("#guest4_diet").show("fast");
   });
 
-  $("#response_guest4_rsvp_yes").click(function(){
+  $("#response_guest4_rsvp_no").click(function(){
     $(".guest4_diet").hide("fast");
   });
 
