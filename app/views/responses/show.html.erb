@@ -13,9 +13,9 @@
   <div class="guest-name-text"> <b> <%= @response.guest1_first_name %> <%= @response.guest1_surname %> </b> </div>
 <ul>
   <% if @response.guest1_rsvp === "no" %>
-<li><div class="rsvp-confirm-text">  RSVP: Unable to attend </div></li>
+<li><div class="rsvp-confirm-text">  RSVP: Not attending </div></li>
   <% else %>
-  <li><div class="rsvp-confirm-text"> <b> RSVP: </b> Will be there </div></li>
+  <li><div class="rsvp-confirm-text"> <b> RSVP: </b> Attending </div></li>
     <% if @response.guest1_dietary_requirements === "no" %>
       <li><div class="rsvp-confirm-text"> <b> Dietary Requirements: </b> None</div></li>
     <% else %> 
@@ -29,9 +29,9 @@
   <div class="guest-name-text"> <b> <%= @response.guest2_first_name %> <%= @response.guest2_surname %> </b> </div>
 <ul>
   <% if @response.guest2_rsvp === "no" %>
-<li><div class="rsvp-confirm-text"> <b> RSVP: </b> Unable to attend </div></li>
+<li><div class="rsvp-confirm-text"> <b> RSVP: </b> Not attending </div></li>
   <% else %>
-  <li><div class="rsvp-confirm-text"> <b> RSVP: </b> Will be there </div></li>
+  <li><div class="rsvp-confirm-text"> <b> RSVP: </b> Attending </div></li>
     <% if @response.guest2_dietary_requirements === "no" %>
       <li><div class="rsvp-confirm-text"> <b> Dietary Requirements: </b> None</div></li>
     <% else %> 
@@ -45,9 +45,9 @@
   <div class="guest-name-text"> <b> <%= @response.guest3_first_name %> <%= @response.guest3_surname %> </b> </div>
 <ul>
   <% if @response.guest3_rsvp === "no" %>
-<li><div class="rsvp-confirm-text"> <b> RSVP: </b> Unable to attend </div></li>
+<li><div class="rsvp-confirm-text"> <b> RSVP: </b> Not attending </div></li>
   <% else %>
-  <li><div class="rsvp-confirm-text"> <b> RSVP: </b> Will be there </div></li>
+  <li><div class="rsvp-confirm-text"> <b> RSVP: </b> Attending </div></li>
     <% if @response.guest3_dietary_requirements === "no" %>
       <li><div class="rsvp-confirm-text"> <b> Dietary Requirements: </b> None</div></li>
     <% else %> 
@@ -61,9 +61,9 @@
   <div class="guest-name-text"> <b> <%= @response.guest4_first_name %> <%= @response.guest4_surname %> </b> </div>
 <ul>
   <% if @response.guest4_rsvp === "no" %>
-<li><div class="rsvp-confirm-text"> <b> RSVP: </b> Unable to attend </div></li>
+<li><div class="rsvp-confirm-text"> <b> RSVP: </b> Not attending </div></li>
   <% else %>
-  <li><div class="rsvp-confirm-text"> <b> RSVP: </b> Will be there </div></li>
+  <li><div class="rsvp-confirm-text"> <b> RSVP: </b> Attending </div></li>
     <% if @response.guest4_dietary_requirements === "no" %>
       <li><div class="rsvp-confirm-text"> <b> Dietary Requirements: </b> None</div></li>
     <% else %> 
@@ -79,9 +79,9 @@
 
 
 
-<div class="form-group">
-    <div class="change-rsvp"> <%=  link_to 'Back to Home', controller:'home' %>  </div>
+<center>
+<div value="Back to Home" class="btn btn-secondary" >  <%=  link_to 'Back to Home', controller:'home' %>  </div>
+<div value="Edit RSVP" class="btn btn-secondary" > <%=  link_to 'Edit RSVP', edit_response_path(@response) %> </div>
+</center>
 
 
-
-</div>
