@@ -166,5 +166,13 @@ $(document).ready(function(e){
   });
 
 
+  $("#hamburger").click(function() {
+    if ($("#myLinks").is(":visible"))
+    $("#myLinks").hide("fast");
+  else
+    $("#myLinks").show("fast");
+  })
+
+
 });
 
