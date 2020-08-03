@@ -17,15 +17,35 @@ class ResponsesController < ApplicationController
     
     def update
         @response = Response.find(params[:id])
-        @response.update(rsvp: params[:response][:rsvp], text: params[:response][:text])
-        @response.update(dietary_requirements: params[:response][:dietary_requirements], diet_details: params[:response][:diet_details])   
-        @response.update(plus1_first_name: params[:response][:plus1_first_name], plus1_surname: params[:response][:plus1_surname], plus1_dietary_requirements: params[:response][:plus1_dietary_requirements], plus1_diet_details: params[:response][:plus1_diet_details])
-        @response.update(plus1_rsvp: params[:response][:plus1_rsvp])
-        @response.plus1_first_name = @response.plus1_first_name.capitalize
-        @response.plus1_surname = @response.plus1_surname.capitalize
-        @response.diet_details = @response.diet_details.capitalize
-        @response.plus1_diet_details = @response.plus1_diet_details.capitalize
+        @response.update(number_of_guests: params[:response][:number_of_guests])
+        @response.update(guest1_rsvp: params[:response][:guest1_rsvp], guest1_first_name: params[:response][:guest1_first_name], guest1_surname: params[:response][:guest1_surname], guest1_dietary_requirements: params[:response][:guest1_dietary_requirements], guest1_diet_details: params[:response][:guest1_diet_details] )
+        @response.update(guest2_rsvp: params[:response][:guest2_rsvp], guest2_first_name: params[:response][:guest2_first_name], guest2_surname: params[:response][:guest2_surname], guest2_dietary_requirements: params[:response][:guest2_dietary_requirements], guest2_diet_details: params[:response][:guest2_diet_details] )
+        @response.update(guest3_rsvp: params[:response][:guest3_rsvp], guest3_first_name: params[:response][:guest3_first_name], guest3_surname: params[:response][:guest3_surname], guest1_dietary_requirements: params[:response][:guest3_dietary_requirements], guest3_diet_details: params[:response][:guest3_diet_details] )
+        @response.update(guest4_rsvp: params[:response][:guest4_rsvp], guest4_first_name: params[:response][:guest4_first_name], guest4_surname: params[:response][:guest4_surname], guest4_dietary_requirements: params[:response][:guest4_dietary_requirements], guest4_diet_details: params[:response][:guest4_diet_details] )
+        @response.guest1_first_name = @response.guest1_first_name.capitalize
+        @response.guest1_surname = @response.guest1_surname.capitalize
+        @response.guest1_diet_details = @response.guest1_diet_details.capitalize
+        @response.guest2_first_name = @response.guest2_first_name.capitalize
+        @response.guest2_surname = @response.guest2_surname.capitalize
+        @response.guest2_diet_details = @response.guest2_diet_details.capitalize
+        @response.guest3_first_name = @response.guest3_first_name.capitalize
+        @response.guest3_surname = @response.guest3_surname.capitalize
+        @response.guest3_diet_details = @response.guest3_diet_details.capitalize
+        @response.guest4_first_name = @response.guest4_first_name.capitalize
+        @response.guest4_surname = @response.guest4_surname.capitalize
+        @response.guest4_diet_details = @response.guest4_diet_details.capitalize
+       
         @response.save
+
+        p "response after saving:"
+        p @response
+        p @response.save!
+        if @response.save
+            p "HHHORAYYYY_____________________"
+        else
+            p "BOOOOO_________________________"
+        end
+        
         redirect_to response_path(@response)
 
     end

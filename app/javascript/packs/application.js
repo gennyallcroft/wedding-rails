@@ -99,14 +99,45 @@ $(document).ready(function(e){
       });
   }).change();
 
+  if($('#response_guest1_rsvp_yes').is(':checked') && $('#response_guest1_rsvp_yes').val() === "yes"){ 
+    $("#guest1_diet").show();
+  }
+
+  if($('#response_guest1_dietary_requirements_yes').is(':checked') && $('#response_guest1_dietary_requirements_yes').val() === "yes"){ 
+    $("#response_guest1_diet_details").show();
+  }
+
+  if($('#response_guest2_rsvp_yes').is(':checked') && $('#response_guest2_rsvp_yes').val() === "yes"){ 
+    $("#guest2_diet").show();
+  }
+
+  if($('#response_guest2_dietary_requirements_yes').is(':checked') && $('#response_guest2_dietary_requirements_yes').val() === "yes"){ 
+    $("#response_guest2_diet_details").show();
+  }
+  
+  if($('#response_guest3_rsvp_yes').is(':checked') && $('#response_guest3_rsvp_yes').val() === "yes"){ 
+    $("#guest3_diet").show();
+  }
+
+  if($('#response_guest3_dietary_requirements_yes').is(':checked') && $('#response_guest3_dietary_requirements_yes').val() === "yes"){ 
+    $("#response_guest3_diet_details").show();
+  }
+
+  if($('#response_guest1_rsvp_yes').is(':checked') && $('#response_guest4_rsvp_yes').val() === "yes"){ 
+    $("#guest4_diet").show();
+  }
+  
+  if($('#response_guest4_dietary_requirements_yes').is(':checked') && $('#response_guest4_dietary_requirements_yes').val() === "yes"){ 
+    $("#response_guest4_diet_details").show();
+  }
 
 
   $("#response_guest1_rsvp_yes").click(function(){
     $("#guest1_diet").show("fast");
   });
 
-  $("#response_guest1_rsvp_yes").click(function(){
-    $(".guest1_diet").hide("fast");
+  $("#response_guest1_rsvp_no").click(function(){
+    $("#guest1_diet").hide("fast");
   });
 
   $("#response_guest1_dietary_requirements_no").click(function(){
