@@ -8,6 +8,7 @@ gem 'bootstrap_form'
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
+gem 'dotenv-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
 # Use sqlite3 as the database for Active Record

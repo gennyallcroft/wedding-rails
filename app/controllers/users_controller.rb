@@ -13,9 +13,12 @@ class UsersController < ApplicationController
     @user.surname = @user.surname.capitalize
 
     if @user.save
+      p "saved success"
+      cookies[:auth_token] = @user.auth_token
       session[:user_id] = @user.id
       redirect_to '/home/index'
     else
+      p "user did not save!!!!!!"
       render '/users/new'
     end
  end

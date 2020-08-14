@@ -15,4 +15,11 @@ class User < ApplicationRecord
                          length: {minimum: 6,
                          message: 'Your password must contain at least 6 characters'}
     validates_confirmation_of :password, :message => 'Your passwords do not match, please try again'
+    before_create { generate_token(:auth_token) }
+
+    def generate_token(column)
+        begin
+            self[column] = SecureRandom.urlsafe_base64
+        end while User.exists?(column => self[column])
+    end
 end
