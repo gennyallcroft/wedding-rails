@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'password_resets/new'
   get 'fa_qs/index'
   get 'travel/index'
   get 'details/index'
@@ -15,6 +16,7 @@ Rails.application.routes.draw do
 
   resources :responses, only: [:index, :show, :new, :create, :edit, :update]
   resources :plus1s, only: [:index, :show, :new, :create, :edit, :update]
+  resources :password_resets
 
   root 'home#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
