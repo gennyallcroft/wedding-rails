@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'password_resets/new'
   get 'fa_qs/index'
   get 'travel/index'
   get 'details/index'
