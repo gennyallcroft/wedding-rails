@@ -19,13 +19,8 @@ class User < ApplicationRecord
 
 
     def send_password_reset
-        p "cominng into the send password reset"
         generate_token(:password_reset_token)
         self.password_reset_sent_at = Time.zone.now
-        p "password reset token_____"
-        p self.password_reset_token
-        p "password reset sennt at___________"
-        p self.password_reset_sent_at
         save!
         UserMailer.password_reset(self).deliver
     end

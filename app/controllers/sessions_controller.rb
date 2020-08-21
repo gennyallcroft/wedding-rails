@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
        redirect_to '/home/index'
     else
       p "authentication failed wahhh"
-       redirect_to '/login'
+       redirect_to '/login',  :notice => "Email and password do not match"
     end
   end
 
