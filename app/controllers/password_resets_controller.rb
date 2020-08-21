@@ -28,9 +28,13 @@ class PasswordResetsController < ApplicationController
       redirect_to new_password_reset_path, :alert => "Password token has expired"
     elsif 
       new_password = params[:user][:password]
-      encrypted_password = BCrypt::Password.create(new_password)
-      @user.update(password_digest: encrypted_password)
-      redirect_to '/login', :notice => "Password has been reset"
+        if new_password.length < 6
+          redirect_to edit_password_reset_path, :alert => "Password must be 6 or more characters"
+        else
+        encrypted_password = BCrypt::Password.create(new_password)
+        @user.update(password_digest: encrypted_password)
+        redirect_to '/login', :notice => "Password has been reset"
+        end
     else
       render  :edit
   end
