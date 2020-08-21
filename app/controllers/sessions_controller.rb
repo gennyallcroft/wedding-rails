@@ -7,11 +7,13 @@ class SessionsController < ApplicationController
 
   def create
     @user = User.find_by(email: params[:email])
-    if @user && @user.authenticate(params[:password])
+        if @user && @user.authenticate(params[:password])
        session[:user_id] = @user.id
        redirect_to '/home/index'
-    else
-       redirect_to '/login'
+        elsif !@user
+          redirect_to '/login',  :notice => "No user signed up with this email"
+        elsif !@user.authenticate(params[:password])
+          redirect_to '/login',  :notice => "Password incorrect, please try again"
     end
   end
 

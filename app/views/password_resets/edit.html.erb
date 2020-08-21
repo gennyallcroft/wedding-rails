@@ -1,0 +1,18 @@
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<center><div class="form-background-sign-in" >
+<div class="form-heading"> Reset Password </div>
+<div class="reset-password-text" > Please enter a new password for your account below. </div>
+<%= bootstrap_form_for @user, :url => password_reset_path(params[:id]) do|f| %>
+    <% flash.each do |type, msg| %>
+        <div class="alert alert-info">
+          <%= msg %>
+        </div>
+      <% end %>
+  <%= f.text_field :password, :label => "Password (6 or more characters)", :type => "password" %>
+  <center>
+  <input type="submit" name="commit" value="Update Password" class="btn btn-secondary" data-disable-with="Update">
+  </center>
+  </center>
+  <% end %>
+</div>
+</center>

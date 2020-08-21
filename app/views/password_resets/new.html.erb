@@ -1,0 +1,23 @@
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<center><div class="form-background-sign-in" >
+<div class="form-heading"> Reset Password </div>
+<%= form_tag password_resets_path, :method => :post do |f| %>
+    <div class="reset-password-text" > A link to reset your password will be sent by email. </div>
+    <% flash.each do |type, msg| %>
+        <div class="alert alert-info">
+          <%= msg %>
+        </div>
+      <% end %>
+     <div class="form-group">
+   <label for="email">Email</label>
+   <input class="form-control" type="text" name="email" id="email">
+  </div>
+  <center>
+  <input type="submit" name="commit" value="Reset Password" class="btn btn-secondary" data-disable-with="Reset Password">
+  </center>
+
+  </center>
+  <% end %>
+</div>
+</center>
+

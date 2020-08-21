@@ -2,6 +2,11 @@
 <center><div class="form-background-sign-in" >
 <div class="form-heading"> Sign In </div>
 <div class="sign-up-text"> Don't have an account? <%= link_to 'Create Account', '/users/new', method: :get %> </div>
+<% flash.each do |type, msg| %>
+  <div class="alert alert-info">
+    <%= msg %>
+  </div>
+<% end %>
 <%= bootstrap_form_tag url: '/login' do %>
    <div class="form-group">
    <label for="email">Email</label>
@@ -11,6 +16,7 @@
   <label for="password">Password</label>
   <input class="form-control" type="password" name="password" id="password">
   </div>
+  <%= link_to "Forgotten password?", new_password_reset_path %>
   <center>
   <input type="submit" name="commit" value="Continue" class="btn btn-secondary" data-disable-with="Continue">
   </center>
