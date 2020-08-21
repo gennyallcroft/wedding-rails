@@ -8,14 +8,13 @@ class PasswordResetsController < ApplicationController
   end
 
   def create
-    p "coming into create password_resets method_________________________________________________"
-    p "email params___"
-    p params[:email]
     @user = User.find_by_email(params[:email])
-    p "user::::"
-    p @user
-    @user.send_password_reset if @user
-    redirect_to '/login'
+    if @user
+      @user.send_password_reset 
+      redirect_to '/login', :notice => "An email has been sent to reset your password"
+    else
+      redirect_to  new_password_reset_path, :notice => "Please enter the email address you signed up with"
+    end
   end
 
   def edit
