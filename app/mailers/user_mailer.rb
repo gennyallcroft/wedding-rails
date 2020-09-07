@@ -9,6 +9,6 @@ class UserMailer < ApplicationMailer
     @user = user
     @greeting = "Hi"
 
-    mail :to => "gennyallcroft@hotmail.co.uk", :subject => "Password Reset"
+    mail :to => user.email, :subject => "Password Reset"
   end
 end
