@@ -21,14 +21,20 @@ class User < ApplicationRecord
     def send_password_reset
         generate_token(:password_reset_token)
         self.password_reset_sent_at = Time.zone.now
+        p "password reset token__________:"
+        p self.password_reset_token
+        p "password reset token sent at:_________"
+        p self.password_reset_sent_at
         save!
+        p "this is the user now:_______"
+        p self
         UserMailer.password_reset(self).deliver
     end
 
     def generate_token(column)
         # begin 
             self[column] = SecureRandom.urlsafe_base64
-        # end while @user.Exists?(column => self[:column])
+        # end while @user.Exists?(column => self[:column]_)
     end
 
 

@@ -13,7 +13,7 @@ class PasswordResetsController < ApplicationController
       @user.send_password_reset 
       redirect_to '/login', :notice => "An email has been sent to reset your password"
     else
-      redirect_to  new_password_reset_path, :notice => "Please enter the email address you signed up with"
+      redirect_to  new_password_reset_path, :notice => "No user found, please enter the email address you signed up with"
     end
   end
 
