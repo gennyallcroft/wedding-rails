@@ -3,7 +3,7 @@
 
 <% if logged_in? %>
 <div class="welcome-row">
-<div class="welcome-text"> Welcome <%= current_user.first_name %> |
+<div class="welcome-text"> Welcome, <%= current_user.first_name %> |
  <%= link_to "Log out", logout_path %>
  </div>
 </div>
