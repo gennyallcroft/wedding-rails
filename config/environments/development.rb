@@ -37,7 +37,7 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => "localhost:3000" }
 
 
-  #Genny added this in - need to get it working
+  #Genny added this in for forgotton password info
   config.action_mailer.delivery_method = :smtp
 # SMTP settings for gmail
 config.action_mailer.smtp_settings = {
@@ -52,7 +52,7 @@ config.action_mailer.smtp_settings = {
 
   
 
-  # Don't care if the mailer can't send.
+  # Get error message if mailer can't send.
   config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.perform_caching = false
