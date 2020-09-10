@@ -4,6 +4,8 @@
 <div class="form-heading"> Create Account </div>
 <div class="sign-up-text"> Already have an account? <%= link_to 'Sign In', '/login', method: :get %> </div>
 <%= bootstrap_form_for @user do |f|%>
+  <%= render 'shared/error_messages' %>
+
   <%= f.text_field :first_name%>
   <%= f.text_field :surname%>
   <%= f.text_field :email%>

@@ -6,7 +6,7 @@ class User < ApplicationRecord
     validates :first_name, presence: {message: 'Please enter your first name'}
     validates :surname, presence: {message: 'Please enter your surname'}
     validates :email, format: { with: URI::MailTo::EMAIL_REGEXP, message: "Please enter a valid email address" },
-    presence: {message: 'Please enter your email address'}, :uniqueness => { :case_sensitive => false, message: "You have already signed up with this email address, please sign in" }
+    presence: {message: 'Please enter your email address'}, :uniqueness => { :case_sensitive => false, message: "You have already signed up with this email address, please sign in" }, :reduce => true
 
 
 
@@ -14,6 +14,7 @@ class User < ApplicationRecord
     validates :password_digest, presence: {message: 'Please enter a password'},
                          length: {minimum: 6,
                          message: 'Your password must contain at least 6 characters'},
+                         :reduce => true,
                          on: :create
 
 
