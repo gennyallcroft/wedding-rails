@@ -11,7 +11,7 @@ class User < ApplicationRecord
 
 
 
-    validates :password_digest, presence: {message: 'Please enter a password'},
+    validates :password, presence: {message: 'Please enter a password'},
                          length: {minimum: 6,
                          message: 'Your password must contain at least 6 characters'},
                          :reduce => true,
