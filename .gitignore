@@ -34,3 +34,7 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+#ignore the file with the username and password for gmail and the google API key
+
+/config/local_env.yml
