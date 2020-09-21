@@ -2,7 +2,13 @@
     <div class="travel-details">
     <div class="travel-heading">FAQs</div>
     <div class="row">
-    <div class="h3-first"> How should I RSVP to the wedding? </div>
+    <div class="h3-first"> Where should we stay? </div>
+    <p> There are lots of accommodation options in Oxford for all different budgets. Oxford is small - our wedding ceremony is in the centre of town and the reception is 2 miles away. </p>
+    <p> You can check out some of the options on <a href="https://www.airbnb.co.uk/s/Oxford/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&source=structured_search_input_header&search_type=unknown&ne_lat=51.762895928603555&ne_lng=-1.2132927898183254&sw_lat=51.71261446144581&sw_lng=-1.282815647484341&zoom=13&search_by_map=true&query=Oxford%2C%20United%20Kingdom&checkin=2021-07-17&checkout=2021-07-18&adults=2" target="_blank"> Airbnb.co.uk </a> and <a href="https://www.booking.com/searchresults.en-gb.html?label=opensearch-plugin&sid=88a6861ba8e048ec4f3b0233d3bf79ce&tmpl=searchresults&checkin_month=7&checkin_monthday=17&checkin_year=2021&checkout_month=7&checkout_monthday=18&checkout_year=2021&city=-2604911&class_interval=1&dest_id=-2604911&dest_type=city&dtdisc=0&from_sf=1&group_adults=1&group_children=0&inac=0&index_postcard=0&label_click=undef&no_rooms=1&postcard=0&room1=A&sb_price_type=total&shw_aparth=1&slp_r_match=0&src_elem=sb&srpvid=93ff852c222a00bf&ss=Oxford&ss_all=0&ssb=empty&sshis=0&ssne=Oxford&ssne_untouched=Oxford&top_ufis=1&order=distance_from_search" target="_blank">Booking.com</a>. It is also possible to stay in Oxford University college accommodation, which is basic but good value and gives you a chance to stay in one of Oxford's colleges. More info can be found <a href="https://www.universityrooms.com/en-GB/city/Oxford/home" target="_blank">here</a>. <br>
+    </p>
+    <p>Alternatively, it is possible to get back to London at any time of night using the 24 hour coach service (more detail on the <%= link_to 'Travel', controller: 'travel' %> page).
+    </p> 
+    <h3> How should I RSVP to the wedding? </h3>
     <p> Please let us know if you can make it using the 
     <% if !responded? %>
     <%= link_to 'RSVP', new_response_path %>
@@ -11,7 +17,7 @@
   <% end %> link. Even if you've already let us know in person, we would be grateful if you could please fill in the form too so we can keep track of all of the responses. </p>
   <p> Please RSVP to the wedding by <b> 1 May 2021 </b> at the very latest. </p>
     <h3> What should I do if I need to change my RSVP? </h3>
-    <p> There is the option to edit your RSVP in the RSVP section of the website. This will be disabled after 1 May 2021 - if you need to change your RSVP after this date, please get in touch with Genny (07917612341) or Joey (XXX) as soon as possible to let us know. </p>
+    <p> There is the option to edit your RSVP in the RSVP section of the website. This will be disabled after 1 May 2021 - if you need to change your RSVP after this date, please get in touch with Genny (07917612341) or Joey (07944358884) as soon as possible to let us know. </p>
     <h3>Are my children invited?</h3>
     <p>We regret that we can only accommodate a handful of close family children at our wedding. We hope you understand this decision and will still be able to join us on our special day. </p>
     <h3> What should I wear to the wedding? </h3>
@@ -37,12 +43,9 @@
     </p>
     <h3> How do we get from the Perch back to the centre of Oxford? </h3>
     <p> The Perch is around 2 miles from the centre of Oxford. The best way to get back to the centre of town after the wedding is to travel by taxi. There are lots of taxi companies in Oxford - <a href="https://www.001taxis.com/" target="_blank"> 001 taxis </a> can be reached on 01865 240000, or Uber is also available.</p>
-    </p>
-    <h3> Where should we stay? </h3>
-    <p> There are lots of accommodation options in Oxford for all different budgets. You can check out some of these options on <a href="https://www.airbnb.co.uk/s/Oxford/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&source=structured_search_input_header&search_type=unknown&ne_lat=51.762895928603555&ne_lng=-1.2132927898183254&sw_lat=51.71261446144581&sw_lng=-1.282815647484341&zoom=13&search_by_map=true&query=Oxford%2C%20United%20Kingdom&checkin=2021-07-17&checkout=2021-07-18&adults=2" target="_blank"> Airbnb.co.uk </a> and <a href="https://www.booking.com/searchresults.en-gb.html?label=opensearch-plugin&sid=88a6861ba8e048ec4f3b0233d3bf79ce&tmpl=searchresults&checkin_month=7&checkin_monthday=17&checkin_year=2021&checkout_month=7&checkout_monthday=18&checkout_year=2021&city=-2604911&class_interval=1&dest_id=-2604911&dest_type=city&dtdisc=0&from_sf=1&group_adults=1&group_children=0&inac=0&index_postcard=0&label_click=undef&no_rooms=1&postcard=0&room1=A&sb_price_type=total&shw_aparth=1&slp_r_match=0&src_elem=sb&srpvid=93ff852c222a00bf&ss=Oxford&ss_all=0&ssb=empty&sshis=0&ssne=Oxford&ssne_untouched=Oxford&top_ufis=1&order=distance_from_search" target="_blank">Booking.com</a>. It is also possible to stay in Oxford University college accommodation, which is basic but good value and gives you a chance to stay in one of Oxford's colleges. More info can be found <a href="https://www.universityrooms.com/en-GB/city/Oxford/home" target="_blank">here</a>. <br>
-    </p>
-    <p>Alternatively, it is possible to get back to London at any time of night using the 24 hour coach service (more detail on the <%= link_to 'Travel', controller: 'travel' %> page).
-    </p>    
+    </p>   
+    <h3> Any other questions? </h3>
+    <p> We would be pleased to help. Please get in touch with Genny (07917612341) or Joey (07944358884), or you can email us at gennyandjoeywedding@gmail.com. </p>
     </div>
     </div>
 </div>
