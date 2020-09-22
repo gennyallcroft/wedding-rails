@@ -140,8 +140,16 @@
     margin-bottom: 20px;
 }
 
-body {
+body.pink {
     background: url( 'flowers2.jpg' );
+    font-size: 12pt;
+    background-size: cover;
+    background-repeat: repeat;
+
+}
+
+body.green {
+    background: url( 'wildflowers.jpg' );
     font-size: 12pt;
     background-size: cover;
     background-repeat: repeat;
