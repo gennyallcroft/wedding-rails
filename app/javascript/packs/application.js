@@ -61,6 +61,22 @@ $(document).ready(function(e){
       }
     });
 
+    
+    $('.content').hide();
+    $('.collapsible').click(function() {
+        $('.content').not(this).each(function(){
+      });
+      // // State change visuals
+    
+      //Expand or collapse this panel
+      $(this).next().slideToggle('fast');
+    
+      //Hide the other panels
+      $(".content").not($(this).next()).slideUp('fast');
+    
+    });
+  
+
 
     $("select").change(function(){
       $(this).find("option:selected").each(function(){
@@ -205,5 +221,5 @@ $(document).ready(function(e){
   })
 
 
-});
 
+});
