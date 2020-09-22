@@ -30,6 +30,17 @@
     background-color: white;
   }
 
-  .content_hidden {
-      display: none;
-  }
+
+  .h3-first::after {
+    content: "+";
+    float: right;
+    font-size:25px;
+    font-family: Arial;
+    }
+
+    h3::after {
+        content: "+";
+        float: right;
+        font-size:25px;
+        font-family: Arial;
+        }
