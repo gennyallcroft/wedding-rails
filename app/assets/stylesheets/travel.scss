@@ -6,6 +6,87 @@
 // this is for desktop
 @media screen {
 
+    .travel-wrapper {
+        background-color: white;
+    }
+
+    .travel-row {
+        margin-right: -15px;
+        padding: 20px;
+    }
+
+    .tabs-travel {
+        width: 111%;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 40px;
+        margin-left: -20px;
+    }
+
+    /* tab list item */
+.tabs-travel .tabs-list{
+    list-style:none;
+    margin:0px;
+    padding:0px;
+}
+.tabs-travel .tabs-list li{
+    width:150px;
+    float:left;
+    margin:0px;
+    margin-right:2px;
+    padding:10px 5px;
+    text-align: center;
+    background-color:cornflowerblue;
+    border-radius:3px;
+    font-family: 'AR BLANCA';
+    font-size: 16pt;
+    font-weight: bold;;
+}
+.tabs-travel .tabs-list li:hover{
+    cursor:pointer;
+}
+.tabs-travel .tabs-list li a{
+    text-decoration: none;
+    color:white;
+}
+
+/* Tab content section */
+.tabs-travel .tab{
+    display:none;
+    width:96%;
+    min-height:250px;
+    height:auto;
+    border-radius:3px;
+    padding:20px 15px;
+    background-color:lavender;
+    color:darkslategray;
+    clear:both;
+    margin-bottom: 40px;
+}
+.tabs-travel .tab h3{
+    border-bottom:3px solid cornflowerblue;
+    letter-spacing:1px;
+    font-weight:normal;
+    padding:5px;
+}
+.tabs-travel .tab p{
+    line-height:20px;
+    letter-spacing: 1px;
+}
+
+/* When active state */
+.active{
+    display:block !important;
+}
+.tabs-travel .tabs-list li.active{
+    background-color:lavender !important;
+    color:black !important;
+}
+.active a{
+    color:black !important;
+}
+
+
     
 .columnx2-left-travel {
     float: left;
@@ -65,7 +146,19 @@
 
 @media screen and (min-width : 200px) and (max-width : 1024px) {
 
-
+    .tabs-travel .tabs-list li {
+        width: 76px;
+        float: left;
+        margin: 0px;
+        margin-right: 2px;
+        padding: 10px 5px;
+        text-align: center;
+        background-color: cornflowerblue;
+        border-radius: 3px;
+        font-family: 'AR BLANCA';
+        font-size: 16pt;
+        font-weight: bold;
+    }
     
 .columnx2-left-travel {
     float: left;
