@@ -31,6 +31,9 @@
 //Responses
 @import "/responses";
 
+//FAQs
+@import "/fa_qs";
+
 .invalid-feedback {
     display: none;
 }
@@ -137,9 +140,9 @@ h2 {
 
 h3 {
     font-family: 'AR BLANCA';
-    margin-bottom: 20px;
     font-weight: bold;
-    margin-top: 40px;
+    margin-top: 3px;
+    margin-bottom: 7px;
     
 }
 
@@ -147,7 +150,7 @@ h3 {
     font-family: 'AR BLANCA';
     margin-bottom: 20px;
     font-weight: bold;
-    margin-top: 0px;
+    margin-top: 20px;
     font-size: 24px;
 }
 
@@ -346,9 +349,9 @@ h2 {
 
 h3 {
     font-family: 'AR BLANCA';
-    margin-bottom: 20px;
     font-weight: bold;
-    margin-top: 40px;
+    margin-top: 3px;
+    margin-bottom: 7px;
     
 }
 
