@@ -8,6 +8,10 @@
     display: inline-block;
   }
 
+  .nav-link {
+    height: 40px !important;
+  }
+
 
 
   #active-page {
@@ -226,10 +230,6 @@
   }
 
 
-  // .active {
-  //   text-decoration: underline;
-
-  // }
 
 
 .nav-row {
@@ -279,13 +279,6 @@
   font-weight: bold;
 }
 
-// a:active {
-//   text-decoration: underline;
-// }
-
-}
-
-
 
 
 // this is for phone
@@ -321,11 +314,7 @@
 
   }
 
-   
-  .active {
-    text-decoration: underline;
-    font-family: 'Courier New', Courier, monospace;
-  }
+
 
 
 .nav-row {
@@ -402,10 +391,6 @@
   padding-top: 5px;
 }
 
-a:active {
-  text-decoration: underline;
-}
-
 
 
 /* Style the navigation menu */
@@ -468,4 +453,4 @@ a:active {
 }
 
 
-
+}

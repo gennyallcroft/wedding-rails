@@ -29,8 +29,6 @@ $(document).ready(function(e){
      if ($(this).attr("href") !== "#") {
        var target_URL = $(this).prop("href");
        if (target_URL == current_page_URL) {
-          $('nav-link').removeClass('active');
-          $(this).addClass('active');
         if (current_page_pathname == "/home/index") {
           $('#active-page-home').show();
           $('#inactive-page-home').hide();
@@ -60,6 +58,21 @@ $(document).ready(function(e){
        }
       }
     });
+
+    $(".tabs-list li a").click(function(e){
+      e.preventDefault();
+   });
+ 
+   $(".tabs-list li").click(function(){
+      var tabid = $(this).find("a").attr("href");
+      $(".tabs-list li,.tabs div.tab").removeClass("active");   // removing active class from tab
+ 
+      $(".tab").hide();   // hiding open tab
+      $(tabid).show();    // show tab
+      $(this).addClass("active"); //  adding active class to clicked tab
+ 
+   });
+ 
 
     
     $('.content').hide();
