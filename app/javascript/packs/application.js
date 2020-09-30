@@ -196,7 +196,7 @@ $(document).ready(function(e){
   });
 
   $("#response_guest2_rsvp_no").click(function(){
-    $(".guest2_diet").hide("fast");
+    $("#guest2_diet").hide("fast");
   });
 
   $("#response_guest2_dietary_requirements_no").click(function(){
@@ -212,7 +212,7 @@ $(document).ready(function(e){
   });
 
   $("#response_guest3_rsvp_no").click(function(){
-    $(".guest3_diet").hide("fast");
+    $("#guest3_diet").hide("fast");
   });
 
   $("#response_guest3_dietary_requirements_no").click(function(){
@@ -228,7 +228,7 @@ $(document).ready(function(e){
   });
 
   $("#response_guest4_rsvp_no").click(function(){
-    $(".guest4_diet").hide("fast");
+    $("#guest4_diet").hide("fast");
   });
 
   $("#response_guest4_dietary_requirements_no").click(function(){
