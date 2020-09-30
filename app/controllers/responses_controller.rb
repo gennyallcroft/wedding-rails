@@ -49,17 +49,12 @@ class ResponsesController < ApplicationController
 
         @response.save
 
-
-        p "response after saving:"
-        p @response
-        p @response.save!
         if @response.save
-            p "HHHORAYYYY_____________________"
-        else
-            p "BOOOOO_________________________"
+            p "saving response, hooray!"
+            redirect_to @response
+          else
+            render '/responses/new'
         end
-        
-        redirect_to response_path(@response)
 
     end
 
@@ -79,15 +74,13 @@ class ResponsesController < ApplicationController
         @response.guest4_diet_details = @response.guest4_diet_details.capitalize
 
         @response.save
-        p "response after saving:"
-        p @response
-        p @response.save!
+
         if @response.save
-            p "HHHORAYYYY_____________________"
-        else
-            p "BOOOOO_________________________"
+            p "saving response, hooray!"
+            redirect_to @response
+          else
+            render '/responses/new'
         end
-        redirect_to @response
     end
 
     private

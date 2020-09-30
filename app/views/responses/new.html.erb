@@ -5,6 +5,7 @@
 <div class="form-heading-rsvp"> RSVP </div>
 <div class="rsvp-deadline-text"> Please RSVP by <b> 1 May 2021 </b></div>
 <%= bootstrap_form_for @response do |f| %>
+  <%= render 'shared/responses_error_messages' %>
 <%= f.select :number_of_guests , [["", 0], ["1", 1], ["2", 2], ["3", 3], ["4", 4]], { label: "How many people are on your invitation?", wrapper: { class: 'has-warning', data: { foo: 'bar' } } }, { class: "selectpicker" }%>
 
 <div class="guest 1">
@@ -13,7 +14,7 @@
   <%= f.text_field :guest1_surname, :label => "Surname" %>
   <label for="response_guest1_rsvp">RSVP</label> <br>
   <div class="radio-row">
-<%= radio_button("response", "guest1_rsvp", "yes", :label => "RSVP") %>
+<%= radio_button("response", "guest1_rsvp", "yes", :label => "RSVP", checked: true) %>
 <%= label_tag(:rsvp_yes, "Attending") %> 
 </div>
 <div class="radio-row">
@@ -24,7 +25,7 @@
 <div class="diet">
 <label for="response_guest1_rsvp">Dietary Requirements?</label> <br>
   <div class="radio-row">
-<%= radio_button("response", "guest1_dietary_requirements", "no") %>
+<%= radio_button("response", "guest1_dietary_requirements", "no", checked: true) %>
 <%= label_tag(:dietary_requirements_no, "None") %> 
 </div>
 <div class="radio-row">
@@ -42,7 +43,7 @@
 <%= f.text_field :guest2_surname, :label => "Surname" %>
 <label for="response_guest2_rsvp">RSVP</label> <br>
 <div class="radio-row">
-<%= radio_button("response", "guest2_rsvp", "yes", :label => "RSVP") %>
+<%= radio_button("response", "guest2_rsvp", "yes", :label => "RSVP", checked: true) %>
 <%= label_tag(:rsvp_yes, "Attending") %> 
 </div>
 <div class="radio-row">
@@ -53,7 +54,7 @@
 <div class="diet">
 <label for="response_guest2_rsvp">Dietary Requirements?</label> <br>
   <div class="radio-row">
-<%= radio_button("response", "guest2_dietary_requirements", "no") %>
+<%= radio_button("response", "guest2_dietary_requirements", "no", checked: true) %>
 <%= label_tag(:dietary_requirements_no, "None") %> 
 </div>
 <div class="radio-row">
@@ -71,7 +72,7 @@
 <%= f.text_field :guest3_surname, :label => "Surname" %>
 <label for="response_guest3_rsvp">RSVP</label> <br>
 <div class="radio-row">
-<%= radio_button("response", "guest3_rsvp", "yes", :label => "RSVP") %>
+<%= radio_button("response", "guest3_rsvp", "yes", :label => "RSVP", checked: true) %>
 <%= label_tag(:rsvp_yes, "Attending") %> 
 </div>
 <div class="radio-row">
@@ -82,7 +83,7 @@
 <div class="diet">
 <label for="response_guest3_rsvp">Dietary Requirements?</label> <br>
   <div class="radio-row">
-<%= radio_button("response", "guest3_dietary_requirements", "no") %>
+<%= radio_button("response", "guest3_dietary_requirements", "no", checked: true) %>
 <%= label_tag(:dietary_requirements_no, "None") %> 
 </div>
 <div class="radio-row">
@@ -100,7 +101,7 @@
 <%= f.text_field :guest4_surname, :label => "Surname" %>
 <label for="response_guest4_rsvp">RSVP</label> <br>
 <div class="radio-row">
-<%= radio_button("response", "guest4_rsvp", "yes", :label => "RSVP") %>
+<%= radio_button("response", "guest4_rsvp", "yes", :label => "RSVP", checked: true) %>
 <%= label_tag(:rsvp_yes, "Attending") %> 
 </div>
 <div class="radio-row">
@@ -111,7 +112,7 @@
 <div class="diet">
 <label for="response_guest4_rsvp">Dietary Requirements?</label> <br>
   <div class="radio-row">
-<%= radio_button("response", "guest4_dietary_requirements", "no") %>
+<%= radio_button("response", "guest4_dietary_requirements", "no", checked: true) %>
 <%= label_tag(:dietary_requirements_no, "None") %> 
 </div>
 <div class="radio-row">
