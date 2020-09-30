@@ -166,7 +166,7 @@ $(document).ready(function(e){
     $("#response_guest3_diet_details").show();
   }
 
-  if($('#response_guest1_rsvp_yes').is(':checked') && $('#response_guest4_rsvp_yes').val() === "yes"){ 
+  if($('#response_guest4_rsvp_yes').is(':checked') && $('#response_guest4_rsvp_yes').val() === "yes"){ 
     $("#guest4_diet").show();
   }
   
