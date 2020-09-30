@@ -9,10 +9,6 @@ class ApplicationController < ActionController::Base
 
 
     def current_user    
-        p "this is current user method:"
-        p  User.find_by(id: session[:user_id])  
-        p "this is the session user id"
-        p session[:user_id]
         User.find_by(id: session[:user_id])  
     end
 
@@ -25,9 +21,6 @@ class ApplicationController < ActionController::Base
     end
 
     def logged_in?
-        p "checking if logged in"
-        p "what is current user"
-        p current_user
         !current_user.nil?  
     end
 

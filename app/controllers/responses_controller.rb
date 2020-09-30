@@ -34,8 +34,21 @@ class ResponsesController < ApplicationController
         @response.guest4_first_name = @response.guest4_first_name.capitalize
         @response.guest4_surname = @response.guest4_surname.capitalize
         @response.guest4_diet_details = @response.guest4_diet_details.capitalize
-       
+        
+        if @response.number_of_guests === 1
+            @response.update(guest2_rsvp: nil, guest2_first_name: nil, guest2_surname: nil, guest2_dietary_requirements: nil, guest2_diet_details: nil )
+            @response.update(guest3_rsvp: nil, guest3_first_name: nil, guest3_surname: nil, guest3_dietary_requirements: nil, guest3_diet_details: nil )
+            @response.update(guest4_rsvp: nil, guest4_first_name: nil, guest4_surname: nil, guest4_dietary_requirements: nil, guest4_diet_details: nil)
+        elsif @response.number_of_guests === 2
+            @response.update(guest3_rsvp: nil, guest3_first_name: nil, guest3_surname: nil, guest3_dietary_requirements: nil, guest3_diet_details: nil )
+            @response.update(guest4_rsvp: nil, guest4_first_name: nil, guest4_surname: nil, guest4_dietary_requirements: nil, guest4_diet_details: nil)
+        elsif @response.number_of_guests === 3
+            @response.update(guest4_rsvp: nil, guest4_first_name: nil, guest4_surname: nil, guest4_dietary_requirements: nil, guest4_diet_details: nil)
+        end
+        
+
         @response.save
+
 
         p "response after saving:"
         p @response
