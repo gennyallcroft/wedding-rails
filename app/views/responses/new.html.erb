@@ -10,8 +10,8 @@
 
 <div class="guest 1">
   <div class="guest-name-text" > Guest 1 </div>
-  <%= f.text_field :guest1_first_name, :label => "First Name" %>
-  <%= f.text_field :guest1_surname, :label => "Surname" %>
+  <%= f.text_field :guest1_first_name, :label => "First Name", :value => current_user.first_name %>
+  <%= f.text_field :guest1_surname, :label => "Surname", :value => current_user.surname %>
   <label for="response_guest1_rsvp">RSVP</label> <br>
   <div class="radio-row">
 <%= radio_button("response", "guest1_rsvp", "yes", :label => "RSVP", checked: true) %>
