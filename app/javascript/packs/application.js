@@ -59,11 +59,7 @@ $(document).ready(function(e){
       }
     });
 
-    $(".tabs-list li a").click(function(e){
-      e.preventDefault();
-   });
- 
-   $(".tabs-list li").click(function(){
+    $(".tabs-list li").click(function(){
       var tabid = $(this).find("a").attr("href");
       $(".tabs-list li,.tabs div.tab").removeClass("active");   // removing active class from tab
  
@@ -86,7 +82,6 @@ $(document).ready(function(e){
     $(this).addClass("active"); //  adding active class to clicked tab
 
  });
- 
 
     
     $('.content').hide();
@@ -102,6 +97,11 @@ $(document).ready(function(e){
       $(".content").not($(this).next()).slideUp('fast');
     
     });
+
+    $('.perch-link').click(function() {
+      window.location.replace("/details/index");
+      //need to finish
+    })
   
 
 

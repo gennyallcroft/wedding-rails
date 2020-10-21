@@ -141,11 +141,18 @@
 }
 
 body.pink {
-    background: url( 'flowers2.jpg' );
+    background: url( 'pink-new.jpg' );
     font-size: 12pt;
     background-size: cover;
     background-repeat: repeat;
 
+}
+
+body.blue {
+    background: url( 'blue-flowers-vivid' );
+    font-size: 12pt;
+    background-size: cover;
+    background-repeat: repeat;
 }
 
 body.green {
@@ -465,6 +472,7 @@ h3 {
     font-weight: bold;
     margin-top: 3px;
     margin-bottom: 7px;
+    font-size: 13pt;
     
 }
 
