@@ -27,7 +27,11 @@
     <h3> What should I do if I need to change my RSVP? </h3>
     </div>
     <div class="content">
-    <p> There is the option to edit your RSVP in the RSVP section of the website. This will be disabled after 1 May 2021 - if you need to change your RSVP after this date, please get in touch with Genny (07917612341) or Joey (07944358884) as soon as possible to let us know. </p>
+    <p> There is the option to edit your RSVP in the     <% if !responded? %>
+    <%= link_to 'RSVP', new_response_path %>
+  <% else %>
+  <%= link_to 'RSVP', response_path(current_response) %>
+  <% end %>  section of the website. This will be disabled after 1 May 2021 - if you need to change your RSVP after this date, please get in touch with Genny (07917612341) or Joey (07944358884) as soon as possible to let us know. </p>
     </div>
     <div class="collapsible">
     <h3>Are my children invited?</h3>

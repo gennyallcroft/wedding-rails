@@ -13,6 +13,18 @@
 
 @media screen  {
 
+.map1-desktop {
+    
+ }
+
+// .map1-mobile {
+//     display: none;
+// }
+
+// .map2-mobile {
+//     display: none;
+// }
+
 .details {
     background-color: white;
     border-radius: 1em;
@@ -123,6 +135,14 @@
 //this is for mobile
 
 @media screen and (min-width : 200px) and (max-width : 1024px) {
+
+.map1-desktop {
+    display: none;
+}
+
+.map2-desktop {
+    display: none;
+}
 
 .details {
     background-color: white;
