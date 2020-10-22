@@ -38,6 +38,10 @@
     display: none;
 }
 
+
+
+
+
 #error_explanation {
     color: red;
     ul {
@@ -221,6 +225,13 @@ p {
     margin-bottom: 25px;
     text-align: left;
     
+}
+
+ul {
+    font-family: $websiteFont;
+    font-size: 14pt;
+    margin-bottom: 25px;
+    text-align: left;
 }
 
 h2 {
