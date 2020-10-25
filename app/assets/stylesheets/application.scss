@@ -79,7 +79,7 @@
     margin-right:2px;
     padding:10px 5px;
     text-align: center;
-    background-color:cornflowerblue;
+    background-color:lavender;
     border-radius:3px;
     font-family: 'AR BLANCA';
     font-size: 16pt;
@@ -90,7 +90,7 @@
 }
 .tabs .tabs-list li a{
     text-decoration: none;
-    color:white;
+    color:black;
 }
 
 /* Tab content section */
@@ -101,13 +101,13 @@
     height:auto;
     border-radius:3px;
     padding:20px 15px;
-    background-color:lavender;
+    background-color:darkslategray;
     color:darkslategray;
     clear:both;
     margin-bottom: 40px;
 }
 .tabs .tab h3{
-    border-bottom:3px solid cornflowerblue;
+    border-bottom:3px solid lavender;
     letter-spacing:1px;
     font-weight:normal;
     padding:5px;
@@ -119,14 +119,16 @@
     display:block !important;
 }
 .tabs .tabs-list li.active{
-    background-color:lavender !important;
-    color:black !important;
+    background-color:darkslategray !important;
+    color:white !important;
 }
 .active a{
-    color:black !important;
+    color:cornflowerblue !important;
 }
 
-
+a {
+    color:cornflowerblue;
+}
 
 
 // this is for desktop
