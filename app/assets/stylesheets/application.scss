@@ -81,6 +81,8 @@
     text-align: center;
     background-color:lavender;
     border-radius:3px;
+    border-bottom-left-radius:0px;
+    border-bottom-right-radius:0px;
     font-family: 'AR BLANCA';
     font-size: 16pt;
     font-weight: bold;;
@@ -93,18 +95,25 @@
     color:black;
 }
 
+.tabs .tabs-list li a:active{
+    text-decoration: none;
+    color:white;
+}
+
+
 /* Tab content section */
 .tabs .tab{
     display:none;
     width:96%;
     min-height:250px;
     height:auto;
-    border-radius:3px;
-    padding:20px 15px;
-    background-color:darkslategray;
-    color:darkslategray;
+    border-radius:25px;
+    padding:25px 49px;
+    background-color:#726680;
+    color: #726680;
     clear:both;
     margin-bottom: 40px;
+    border-top-left-radius: 0px;
 }
 .tabs .tab h3{
     border-bottom:3px solid lavender;
@@ -113,22 +122,25 @@
     padding:5px;
 }
 
+a {
+    color:cornflowerblue;
+}
+
+.active a{
+    color:cornflowerblue;
+}
+
 
 /* When active state */
 .active{
     display:block !important;
 }
 .tabs .tabs-list li.active{
-    background-color:darkslategray !important;
-    color:white !important;
-}
-.active a{
-    color:cornflowerblue !important;
+    background-color: #726680 !important;
+    color:white;
 }
 
-a {
-    color:cornflowerblue;
-}
+
 
 
 // this is for desktop
@@ -397,8 +409,10 @@ h3 {
     margin-right: 2px;
     padding: 10px 5px;
     text-align: center;
-    background-color: cornflowerblue;
+    background-color: lavender;
     border-radius: 3px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
     font-family: 'AR BLANCA';
     font-size: 14pt;
     font-weight: bold;
@@ -407,15 +421,16 @@ h3 {
     .tabs .tab {
         text-align: center;
         display: none;
-        width: 96%;
-        min-height: 250px;
-        height: auto;
-        border-radius: 3px;
-        padding: 11px 0px;
-        background-color: lavender;
-        color: darkslategray;
-        clear: both;
+        width:96%;
+        min-height:250px;
+        height:auto;
+        border-radius:25px;
+        padding:25px 25px;
+        background-color:#726680;
+        color: #726680;
+        clear:both;
         margin-bottom: 40px;
+        border-top-left-radius: 0px;
 }
 
 

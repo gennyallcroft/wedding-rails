@@ -25,9 +25,18 @@
 //     display: none;
 // }
 
+// .tab-font {
+//     color: white !important;
+// }
+
+// .tabs .tabs-list li a active {
+//     color: white !important;
+// }
+
 .details {
     background-color: white;
     border-radius: 1em;
+    width: 100%;
     border: solid 1px black;
     display: inline-block;
     padding-left: 96px;
@@ -149,7 +158,7 @@
     background-color: white;
     border-radius: 1em;
     border: solid 1px black;
-    width: 90%;
+    width: 100%;
     display: inline-block;
     padding-left: 39px;
     padding-right: 39px;
