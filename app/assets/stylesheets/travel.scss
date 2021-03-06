@@ -168,6 +168,12 @@
         font-weight: bold;
     }
 
+    
+    .travel-wrapper {
+        background-color: white;
+        border-radius: 24px;
+    }
+
     .tabs-travel ul {
         font-size: 12pt;
     }
@@ -190,6 +196,8 @@
 .columnx2-left-travel {
     float: left;
     width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .train {
