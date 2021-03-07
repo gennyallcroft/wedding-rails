@@ -3,7 +3,7 @@
 
 <center><div class="form-background-rsvp" >
 <div class="form-heading-rsvp"> RSVP </div>
-<div class="rsvp-deadline-text"> Please RSVP by <b> 1 May 2021 </b></div>
+<div class="rsvp-deadline-text"> Please RSVP by <b> 1 June 2021 </b></div>
 <%= bootstrap_form_for @response do |f| %>
   <%= render 'shared/responses_error_messages' %>
 <%= f.select :number_of_guests , [["", 0], ["1", 1], ["2", 2], ["3", 3], ["4", 4]], { label: "How many people are on your invitation?", wrapper: { class: 'has-warning', data: { foo: 'bar' } } }, { class: "selectpicker" }%>
