@@ -287,6 +287,10 @@ h3 {
     box-shadow: 0px 1px 0px #a3abbe, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
 }
 
+.btn:hover {
+    color: white;
+}
+
 .form-heading {
     font-weight: bold;
     font-size: 26pt;
@@ -516,7 +520,7 @@ h3 {
     margin-top: 0px;
     font-size: 13pt;
 }
-g
+
 .btn {
     font-size: 16pt !important;
     padding-left: 31px;
@@ -533,6 +537,12 @@ g
     -moz-box-shadow: 0px 1px 0px #a3abbe, 0px 3px 15px rgba(0, 0, 0, 0.4), inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px 0px 3px rgba(255, 255, 255, 0.5);
     box-shadow: 0px 1px 0px #a3abbe, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
 }
+
+
+.btn:hover {
+    color: white;
+}
+
 
 .form-heading {
     font-weight: bold;
