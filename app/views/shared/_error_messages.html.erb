@@ -2,12 +2,13 @@
   <div id="error_explanation">
     <div class="alert alert-danger">
       The form contains <%= pluralize(@user.errors.count, "error") %>.
-    </div>
-    <ul>
     <% @user.errors.full_messages.each do |msg| %>
+      <ul style="font-family: "AR BLANCA"; font-size: 12pt">
       <li><%= msg %></li>
+      </ul>
     <% end %>
     </ul>
+    </div>
   </div>
 <% end %>
 
