@@ -50,7 +50,7 @@
     font-size: 37pt;
     text-align: center;
     color: #661586;
-    font-family: 'AR BLANCA';
+    font-family: $headingsFont;
 }
 
 .details-sub-header {
@@ -59,7 +59,7 @@
     text-align: center;
     color: #2a0948;
     margin-bottom: 35px;
-    font-family: 'AR BLANCA';
+    font-family: $headingsFont;
 
 }
 
@@ -68,7 +68,7 @@
     font-size: 37pt;
     text-align: center;
     color: #ce2077;
-    font-family: 'AR BLANCA';
+    font-family: $headingsFont;
 }
 
 .details-sub-header-perch {
@@ -77,7 +77,7 @@
     text-align: center;
     color: #2a0948;
     margin-bottom: 35px;
-    font-family: 'AR BLANCA';
+    font-family: $headingsFont;
 
 }
 
@@ -171,7 +171,7 @@
     font-size: 23pt;
     text-align: center;
     color: #661586;
-    font-family: 'AR BLANCA';
+    font-family: $headingsFont;
     background-color: white;
 }
 
@@ -182,7 +182,7 @@
     text-align: center;
     color: #2a0948;
     margin-bottom: 22px;
-    font-family: 'AR BLANCA';
+    font-family: $headingsFont;
 
 }
 
@@ -191,7 +191,7 @@
     font-size: 23pt;
     text-align: center;
     color: #ce2077;
-    font-family: 'AR BLANCA';
+    font-family: $headingsFont;
 }
 
 .details-sub-header-perch {
@@ -200,7 +200,7 @@
     text-align: center;
     color: #2a0948;
     margin-bottom: 22px;
-    font-family: 'AR BLANCA';
+    font-family: $headingsFont;
 
 }
 

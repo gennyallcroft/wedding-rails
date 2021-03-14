@@ -274,7 +274,7 @@
 
 
 .welcome-text {
-  font-family: 'AR BLANCA';
+  font-family: $headingsFont;
   font-size: 16px !important;
   font-weight: bold;
 }
@@ -366,7 +366,7 @@
 
 .welcome-text {
   display: none;
-  font-family: 'AR BLANCA';
+  font-family: $headingsFont;
   font-size: 12pt !important;
   font-weight: bold;
   text-align: left;
@@ -383,7 +383,7 @@
 
 
 .welcome-text-mobile {
-  font-family: 'AR BLANCA';
+  font-family: $headingsFont;
   font-size: 12pt !important;
   font-weight: bold;
   text-align: left;
@@ -399,7 +399,7 @@
   overflow: hidden;
   background-color: #333;
   position: relative;
-  font-family: 'AR BLANCA';
+  font-family: $headingsFont;
   border-bottom: solid 1.5px black;
 }
 
@@ -418,7 +418,7 @@
 }
 
 .topnav a.logout {
-  font-family: 'AR BLANCA';
+  font-family: $headingsFont;
   font-size: 12pt !important;
   font-weight: bold;
   text-align: left;
@@ -447,7 +447,7 @@
 .active {
   background-color: #4CAF50;
   color: white;
-  font-family: 'AR BLANCA';
+  font-family: $headingsFont;
 }
 
 }
