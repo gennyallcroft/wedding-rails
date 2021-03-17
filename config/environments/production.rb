@@ -85,8 +85,8 @@ config.action_mailer.smtp_settings = {
 
   config.action_mailer.perform_caching = false
 
-
-
+#always use https
+  config.force_ssl = true
 
 
   config.action_mailer.perform_caching = false
