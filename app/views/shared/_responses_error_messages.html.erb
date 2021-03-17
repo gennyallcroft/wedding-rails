@@ -2,7 +2,7 @@
   <div id="error_explanation">
     <div class="alert alert-danger">
       The form contains <%= pluralize(@response.errors.count, "error") %>.
-    <ul style="font-family: "AR BLANCA"; font-size: 12pt">
+    <ul style="font-family: 'Garamond, serif'; font-size: 12pt">
     <% @response.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
     <% end %>
