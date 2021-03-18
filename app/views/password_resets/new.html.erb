@@ -5,11 +5,13 @@
 <div class="form-heading"> Reset Password </div>
 <%= form_tag password_resets_path, :method => :post do |f| %>
     <div class="reset-password-text" > A link to reset your password will be sent by email. </div>
+    <div id="error_explanation">
     <% flash.each do |type, msg| %>
-        <div class="alert alert-info">
+        <div class="alert alert-danger">
           <%= msg %>
         </div>
       <% end %>
+      </div>
      <div class="form-group">
    <label for="email">Email</label>
    <input class="form-control" type="text" name="email" id="email">

@@ -5,11 +5,13 @@
 <div class="form-heading"> Reset Password </div>
 <div class="reset-password-text" > Please enter a new password for your account below. </div>
 <%= bootstrap_form_for @user, :url => password_reset_path(params[:id]) do|f| %>
+  <div id="error_explanation">
     <% flash.each do |type, msg| %>
-        <div class="alert alert-info">
+        <div class="alert alert-danger">
           <%= msg %>
         </div>
       <% end %>
+      </div>
   <%= f.text_field :password, :label => "Password (6 or more characters)", :type => "password" %>
   <center>
   <input type="submit" name="commit" value="Update Password" class="btn btn-secondary" data-disable-with="Update">

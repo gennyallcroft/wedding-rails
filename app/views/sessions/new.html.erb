@@ -5,7 +5,7 @@
 <div class="form-heading"> Sign In </div>
 <div class="sign-up-text"> Don't have an account? <%= link_to 'Create Account', '/users/new', method: :get %> </div>
 <% flash.each do |type, msg| %>
-  <div class="alert alert-info">
+  <div class="alert alert-danger">
     <%= msg %>
   </div>
 <% end %>
