@@ -19,28 +19,10 @@
 
 <!-- Top Navigation Menu -->
 <div class="topnav">
-<div class="welcome-row-mobile">
-<div class="welcome-text-mobile"> Welcome, <%= current_user.first_name %>   </div> 
-</div>
-  <!-- Navigation links (hidden by default) -->
-  <div id="myLinks">
-    <a href="/home/index">HOME</a>
-    <a href="/details/index">DETAILS</a>
-    
-    <% if !responded? %>
-    <%= link_to 'RSVP', new_response_path %>
-  <% else %>
-  <%= link_to 'RSVP', response_path(current_response) %>
-  <% end %>
-
-    <a href="/travel/index">TRAVEL</a>
-    <a href="/fa_qs/index">FAQS</a>
-    <a href="/logout">LOG OUT</a>
+  <div class="welcome-row-mobile">
+    <div class="welcome-text-mobile"> Welcome, <%= current_user.first_name %>   </div> 
   </div>
-  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-  <a href="javascript:void(0);" class="icon" id="hamburger">
-    <i class="fa fa-bars"></i>
-  </a>
+
 </div>
 
 
@@ -48,55 +30,7 @@
   <center>
   <div class="nav nav-pills nav-justified">
     <div class="nav-row">
-      <div class="columnx4">
-        <div class="nav-item">
-        <div class="active-page-container">
-        <div id="inactive-page-home"></div>
-          <div id="active-page-home"></div>
-          <%= link_to 'Home', {controller: 'home'}, class: 'nav-link' %>
-      </div>
-      </div>
-
-      </div>
-      <div class="columnx4">
-        <div class="nav-item">
-        <div class="active-page-container">
-        <div id="inactive-page-details"></div>
-          <div id="active-page-details"></div>
-          <%= link_to 'Details', {controller: 'details'}, class: 'nav-link' %>
-        </div>
-        </div>
-      </div>
-      <div class="columnx4">
-        <div class="nav-item">
-        <div class="active-page-container">
-          <div id="active-page-rsvp"></div>
-          <div id="inactive-page-rsvp"></div>
-        <% if !responded? %>
-          <%= link_to 'RSVP', new_response_path, class: 'nav-link' %>
-        <% else %>
-        <%= link_to 'RSVP', response_path(current_response), class: 'nav-link' %>
-        <% end %>
-        </div>
-        </div>
-      </div>
-      <div class="columnx4">
-        <div class="nav-item">
-        <div class="active-page-container">
-        <div id="active-page-travel"></div>
-        <div id="inactive-page-travel"></div>
-          <%= link_to 'Travel', {controller: 'travel'}, class: 'nav-link' %>
-        </div>
-        </div>
-      </div>
-      <div class="columnx4">
-      <div class="nav-item">
-      <div class="active-page-container">
-      <div id="active-page-faqs"></div>
-      <div id="inactive-page-faqs"></div>
-        <%= link_to 'FAQs', {controller: 'fa_qs'}, class: 'nav-link' %>
-      </div>
-      </div>
+    
     </div>
     </div>
   </center>
