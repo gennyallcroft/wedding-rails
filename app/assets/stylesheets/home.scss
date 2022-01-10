@@ -29,7 +29,7 @@
 @media screen  {
 
       #home-image{
-        background-image: url(homepage-postpone-desktop.png);
+        background-image: url(homepage.png);
         height: 104%;
         width: 100%;
         background-size: contain;
@@ -58,7 +58,7 @@
 // this is for phone
 @media screen and (min-width : 200px) and (max-width : 700px) {  
       #home-image{      
-          background-image: url('homepage-postpone-mobile.png');
+          background-image: url('mobile-home-image.png');
           height: 95%;
           width: 100%;
           background-repeat: no-repeat;
