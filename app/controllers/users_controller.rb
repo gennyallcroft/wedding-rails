@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(params.require(:user).permit(:username,        
-    :password, :first_name, :surname, :email, :password_confirmation, :authenticity_token, :id))
+    :password, :first_name, :surname, :email.downcase, :password_confirmation, :authenticity_token, :id))
     
     @user.first_name = @user.first_name.capitalize
     @user.surname = @user.surname.capitalize

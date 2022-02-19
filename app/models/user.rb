@@ -8,15 +8,17 @@ class User < ApplicationRecord
     validates :email, format: { with: URI::MailTo::EMAIL_REGEXP, message: "Please enter a valid email address" },
     presence: {message: 'Please enter your email address'}, :uniqueness => { :case_sensitive => false, message: "You have already signed up with this email address, please sign in" }, :reduce => true
 
-
-
-
     validates :password, presence: {message: 'Please enter a password'},
                          length: {minimum: 6,
                          message: 'Your password must contain at least 6 characters'},
                          :reduce => true,
                          on: :create
 
+    before_save :downcase_fields
+
+    def downcase_fields
+        self.email.downcase!
+    end
 
 
     def send_password_reset
